@@ -7,7 +7,7 @@ html {
 	width: 6.875rem;
 	height: 6.875rem;
 	border-radius: 100%;
-	margin: var(--spacing-base);
+	margin: var(--spacing-small);
 }
 
 .header__headline {
