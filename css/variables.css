@@ -1,4 +1,11 @@
 :root {
 	--font-size-base: 20px;
+	--font-size-headline: 6rem;
+
+	--spacing-base: 1rem;
+
+	--color-primary: #FFFEF7;
+	--color-secondary: #556030; 
+
 
 }
