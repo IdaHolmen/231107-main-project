@@ -5,6 +5,50 @@
 	background: lightpink;
 }
 
+.offset--1 {
+	grid-column-start: 1;
+}
+
+.offset--2 {
+	grid-column-start: 2;
+}
+
+.offset--3 {
+	grid-column-start: 3;
+}
+
+.offset--4 {
+	grid-column-start: 4;
+}
+
+.offset--5 {
+	grid-column-start: 5;
+}
+
+.offset--6 {
+	grid-column-start: 6;
+}
+
+.offset--7 {
+	grid-column-start: 7;
+}
+
+.offset--8 {
+	grid-column-start: 8;
+}
+
+.offset--9 {
+	grid-column-start: 9;
+}
+
+.offset--10 {
+	grid-column-start: 10;
+}
+
+.offset--11 {
+	grid-column-start: 11;
+}
+
 .order--1 {
 	order: 1;
 }
