@@ -1,8 +1,10 @@
 :root {
+	--font-leading-base: 1rem;
+
 	--font-size-base: 20px;
 	--font-size-headline: 6rem;
 
-	--spacing-base: 1rem;
+	--spacing-small: var(--font-leading-base);
 
 	--color-primary: #FFFEF7;
 	--color-secondary: #556030; 
