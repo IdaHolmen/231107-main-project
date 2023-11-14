@@ -4,6 +4,11 @@
 	gap: var(--spacing-small);
 }
 
+.book__container--positioned {
+	grid-column-start: 3;
+	grid-column-end: span 4;
+}
+
 @media screen and (max-width: 1023px) {
 	.column--1,
 	.column--2,
