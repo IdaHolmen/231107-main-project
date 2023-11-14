@@ -67,7 +67,7 @@ html {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 	width: 15.938rem;
 	height: 21.875rem;
 	border: var(--border-black);
@@ -78,21 +78,31 @@ html {
 .book__image {
 	width: 7.5rem;
 	height: 9.375rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
-
 
 .book__price {
 	font-size: var(--font-size-sm-medium);
 	font-weight: 600;
 	display: flex;
-
 }
-
 
 .book__author, .book__title {
 	font-size: var(--font-size-base);
+}
+
+.add__button {
+	width: 10.625rem;
+	height: 2.5rem;
+	background: var(--color-button-primary);
+	color: var(--color-primary);
+	border-radius: var(--border-radius-medium);
+}
+
+.add__button:hover {
+	background: var(--color-button-secondary);
+}
+
+.add__button:active {
+	background: var(--color-button-tertiary);
 }
 
