@@ -6,6 +6,11 @@
 	--font-size-headline: 6rem;
 
 	--spacing-small: var(--font-leading-base);
+	--spacing-medium: var(--font-size-sm-medium);
+	--spacing-large: 3rem;
+	--spacing-xlarge: 4rem;
+	--spacing-xxlarge: 5rem;
+	--spacing-xxxlarge: var(--font-size-headline);
 	
 
 	--color-primary: #FFFEF7;
