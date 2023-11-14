@@ -5,6 +5,8 @@ html {
 
 /* Styling for top part of header */
 .logo-image {
+	margin: 0;
+	padding: 0;
 	width: 6.875rem;
 	height: 6.875rem;
 	border-radius: 100%;

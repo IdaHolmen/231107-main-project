@@ -14,85 +14,80 @@
 
 </head>
 <body>
-	<header>
-		<!-- Top part of header to use for sticky header later -->
-		<div class="top__header-element">
-			<div class="grid">
+	<div class="main-container">
+		<header>
+			<!-- Top part of header to use for sticky header later -->
+			<div class="top__header-element">
+
+				<img class="logo-image" src="../231107-main-project/assets/images/annie-spratt-5cFwQ-WMcJU-unsplash.jpg" alt="Randomly scattered pages from a book">
 				
-				<div class="column--4">
-					<img class="logo-image" src="../231107-main-project/assets/images/annie-spratt-5cFwQ-WMcJU-unsplash.jpg" alt="Randomly scattered pages from a book">
-				</div>
 
-				<div class="header__headline column--8">Book Nook</div>
-
+				<div class="header__headline">Book Nook</div>
 			</div>
-		</div>
 
-		<!-- Header bottom part with components -->
-		<div class="bottom__header-element">
-			<div class="grid">
+			<!-- Header bottom part with components -->
+			<div class="bottom__header-element">
 				
-				<img class="hamburger-menu column--4" src="./assets/icons/bars-light.svg" alt="Hamburger menu">
+				<img class="hamburger-menu offset--1 column--2" src="./assets/icons/bars-light.svg" alt="Hamburger menu">
 
 				<input class="search-field column--4" type="text" placeholder="Search">
-			
+				
 				<img class="save-icon column--2" src="./assets/icons/heart-light.svg" alt="Liked products">
 
 				<img class="shopping-bag-icon column--2" src="./assets/icons/bag-shopping-light.svg" alt="Shopping bag">
-			</div>
-		</div>
-	</header>
-
-	<!-- BOOK SECTION -->
-	<section class="grid">
-		<!-- Harry Potter -->
-		<div class="book__container">
-			<img class="book__image" src="./assets/images/pexels-rdne-stock-project-7978816.jpg" alt="Two wands laying in a cross formation">
-
-			<div class="book__info">
-				<div class="book__price">249,-</div>
 				
-				<p class="book__title">Harry Potter and the Prisoner of Azkaban</p>
+			</div>
+		</header>
+
+		<!-- BOOK SECTION -->
+		<section>
+			<!-- Harry Potter -->
+			<div class="book__container">
+				<img class="book__image" src="./assets/images/pexels-rdne-stock-project-7978816.jpg" alt="Two wands laying in a cross formation">
+
+				<div class="book__info">
+					<div class="book__price">249,-</div>
+					
+					<p class="book__title">Harry Potter and the Prisoner of Azkaban</p>
+					
+					<p class="book__author">J. K. Rowling</p>
+				</div>
 				
-				<p class="book__author">J. K. Rowling</p>
-			</div>
-			
-			<button class="add__button">Add to cart</button>
-		</div>
-
-		<!-- The Hitchhiker's Guide to the Galaxy -->
-		<div class="book__container">
-			<img class="book__image" src="./assets/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg" alt="A galaxy with many nice colors">
-
-			<div class="book__info">
-				<div class="book__price">279,-</div>
-
-				<p class="book__title">The Hitchhiker's Guide to the Galaxy</p>
-
-				<p class="book__author">Douglas Adams</p>
+				<button class="add__button">Add to cart</button>
 			</div>
 
-			<button class="add__button">Add to cart</button>
-		</div>
+			<!-- The Hitchhiker's Guide to the Galaxy -->
+			<div class="book__container">
+				<img class="book__image" src="./assets/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg" alt="A galaxy with many nice colors">
 
-		<!-- Britney Spears - The woman in me -->
-		<div class="book__container">
-			<img class="book__image" src="./assets/images/kelvin-moquete-LOV7Gbmgm30-unsplash.jpg" alt="Fans reaching out">
+				<div class="book__info">
+					<div class="book__price">279,-</div>
 
-			<div class="book__info">
-				<div class="book__price">439,-</div>
+					<p class="book__title">The Hitchhiker's Guide to the Galaxy</p>
 
-				<p class="book__title">The Woman In Me</p>
+					<p class="book__author">Douglas Adams</p>
+				</div>
 
-				<p class="book__author">Britney Spears</p>
+				<button class="add__button">Add to cart</button>
 			</div>
 
-			<button class="add__button">Add to cart</button>
-		</div>
+			<!-- Britney Spears - The woman in me -->
+			<div class="book__container">
+				<img class="book__image" src="./assets/images/kelvin-moquete-LOV7Gbmgm30-unsplash.jpg" alt="Fans reaching out">
 
+				<div class="book__info">
+					<div class="book__price">439,-</div>
 
-	</section>
+					<p class="book__title">The Woman In Me</p>
 
+					<p class="book__author">Britney Spears</p>
+				</div>
+
+				<button class="add__button">Add to cart</button>
+			</div>
+
+		</section>
+	</div>
 	<script src="./js/index.js" defer></script>
 </body>
 </html>
