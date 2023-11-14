@@ -64,6 +64,7 @@ html {
 
 /* General styling for the book containers */
 .book__container {
+	margin-top: var(--spacing-xxlarge);
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
@@ -105,4 +106,6 @@ html {
 .add__button:active {
 	background: var(--color-button-tertiary);
 }
+
+
 
