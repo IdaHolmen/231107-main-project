@@ -64,6 +64,7 @@ html {
 
 /* General styling for the book containers */
 .book__container {
+	cursor: pointer;
 	margin-top: var(--spacing-xxlarge);
 	display: flex;
 	flex-flow: column nowrap;
@@ -76,9 +77,14 @@ html {
 	padding: var(--spacing-small);
 }
 
+.book__container:hover {
+	box-shadow: 0 0 8px grey;
+}
+
 .book__image {
 	width: 7.5rem;
 	height: 9.375rem;
+	border-radius: var(--border-radius-small);
 }
 
 .book__price {
@@ -106,6 +112,8 @@ html {
 .add__button:active {
 	background: var(--color-button-tertiary);
 }
+
+
 
 
 
