@@ -1,13 +1,27 @@
 :root {
 	--font-leading-base: 1rem;
 
-	--font-size-base: 20px;
+	--font-size-base: var(--font-leading-base);
+	--font-size-sm-medium: 2rem;
 	--font-size-headline: 6rem;
 
 	--spacing-small: var(--font-leading-base);
+	
 
 	--color-primary: #FFFEF7;
 	--color-secondary: #556030; 
 
+	--color-accent-1: white;
+	--color-accent-2: #DDA15E;
 
+	--color-search-bar: #EBEBEB;
+
+	--border-radius-small: 0.625rem;
+	--border-radius-sm-medium: 0.938rem;
+	--border-radius-medium: 1.563rem;
+	--border-radius-large: 1.875rem;
+
+	--border-black: 0.5px solid black;
+	--border-green: 1px solid var(--color-secondary);
+	--border-brown: 2px solid var(--color-accent-2);
 }
