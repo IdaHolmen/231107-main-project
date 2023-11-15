@@ -125,6 +125,7 @@ html {
 .book__image {
 	width: 7.5rem;
 	height: 9.375rem;
+	object-fit: cover;
 	border-radius: var(--border-radius-small);
 }
 
