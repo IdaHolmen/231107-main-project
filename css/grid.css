@@ -8,16 +8,17 @@
 }
 
 .book-1 {
-	grid-column: 4 / 6;
-	grid-row: 3 / 5;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 }
 
 .book-2 {
-	grid-column: 8 / 10;
-	grid-row: 3 / 5;
+	grid-column: 4 / 5;
+	grid-row: 1 / 2;
 }
 
 .book-3 {
-	grid-column: 11 / 13;
-	grid-row: 3 / 5;
+	grid-column: 6 / 7;
+	grid-row: 1 / 2;
 }
+
