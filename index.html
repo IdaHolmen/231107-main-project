@@ -15,30 +15,37 @@
 </head>
 <body>
 	
-	<div class="main-container">
+	<header>
 		
 		<!-- Top part of header to use for sticky header later -->
-		<img class="logo-image" src="../231107-main-project/assets/images/annie-spratt-5cFwQ-WMcJU-unsplash.jpg" alt="Randomly scattered pages from a book">
-				
-		<div class="header__headline">Book Nook</div>
+		<div class="header-top">
 			
+			<!-- <img class="logo-image" src="../231107-main-project/assets/images/annie-spratt-5cFwQ-WMcJU-unsplash.jpg" alt="Randomly scattered pages from a book"> -->
+						
+			<p class="header__headline">Book Nook</p>
+		</div>	
 
 		<!-- Header bottom part with components -->
-		<img class="hamburger-menu offset--1 column--2" src="./assets/icons/bars-light.svg" alt="Hamburger menu">
+		<div class="header-bottom">
+			<div class="header-bottom__container">
+				<img class="hamburger-menu" src="./assets/icons/bars-light.svg" alt="Hamburger menu">
 
-		<input class="search-field column--4" type="text" placeholder="Search">
+				<input class="search-field" type="text" placeholder="Search">
 				
-		<img class="save-icon column--2" src="./assets/icons/heart-light.svg" alt="Liked products">
+				<div class="icons-container">
+					<img class="save-icon" src="./assets/icons/heart-light.svg" alt="Liked products">
 
-		<img class="shopping-bag-icon column--2" src="./assets/icons/bag-shopping-light.svg" alt="Shopping bag">
-		
-	</div>			
-		
-
-		<!-- BOOK SECTION -->
+					<img class="shopping-bag-icon" src="./assets/icons/bag-shopping-light.svg" alt="Shopping bag">
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!-- BOOK SECTION -->
+	<div class="main-container">	
 		
 		<!-- Harry Potter -->
-		<div class="book__container">
+		<div class="book__container book-1">
 			<img class="book__image" src="./assets/images/pexels-rdne-stock-project-7978816.jpg" alt="Two wands laying in a cross formation">
 
 			<div class="book__info">
@@ -53,7 +60,7 @@
 		</div>
 
 			<!-- The Hitchhiker's Guide to the Galaxy -->
-		<div class="book__container">
+		<div class="book__container book-2">
 			<img class="book__image" src="./assets/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg" alt="A galaxy with many nice colors">
 
 			<div class="book__info">
@@ -68,7 +75,7 @@
 		</div>
 
 		<!-- Britney Spears - The woman in me -->
-		<div class="book__container">
+		<div class="book__container book-3">
 			<img class="book__image" src="./assets/images/kelvin-moquete-LOV7Gbmgm30-unsplash.jpg" alt="Fans reaching out">
 
 			<div class="book__info">
@@ -81,6 +88,7 @@
 
 			<button class="add__button">Add to cart</button>
 		</div>
+	</div>
 	
 	<script src="./js/index.js" defer></script>
 </body>

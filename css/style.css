@@ -4,30 +4,63 @@ html {
 }
 
 /* Styling for top part of header */
-.logo-image {
+.header-top {
+	display: flex;
+	height: 9.375rem;
+	width: 100%;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-top__container {
+	width: 100%;
+}
+
+/* .logo-image {
 	margin: 0;
 	padding: 0;
-	width: 6rem;
-	height: 6rem;
+	width: 5rem;
+	height: 5rem;
 	border-radius: 100%;
 	margin: var(--spacing-small);
-}
+} */
+
 
 .header__headline {
 	font-size: var(--font-size-headline);
 	color: var(--color-secondary);
 }
 
+
+
 /* Styling for bottom part of header */
+.header-bottom {
+	display: flex;
+	height: 5rem;
+	width: 100%;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-bottom__container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
 .hamburger-menu {
+	flex-basis: 10%;
 	width: 2.5rem;
 	height: 2.5rem;
 	cursor: pointer;
 }
 
-
 .search-field {
-	width: 25rem;
+	outline: none;
+	flex-basis: 30%;
+	width: 20rem;
 	height: 2.5rem;
 	text-align: center;
 	border-radius: var(--border-radius-large);
@@ -42,6 +75,12 @@ html {
 .search-field:active {
 	background: var(--color-accent-1);
 	border: var(--border-brown);
+}
+
+.icons-container {
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 10%;
 }
 
 .save-icon {
@@ -68,7 +107,7 @@ html {
 	flex-flow: column nowrap;
 	justify-content: space-between;
 	align-items: center;
-	width: 15.938rem;
+	width: 15rem;
 	height: 21.875rem;
 	border: var(--border-black);
 	border-radius: var(--border-radius-sm-medium);
