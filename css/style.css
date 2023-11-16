@@ -17,15 +17,6 @@ html {
 	width: 100%;
 }
 
-/* .logo-image {
-	margin: 0;
-	padding: 0;
-	width: 5rem;
-	height: 5rem;
-	border-radius: 100%;
-	margin: var(--spacing-small);
-} */
-
 
 .header__headline {
 	font-size: var(--font-size-headline);
@@ -72,7 +63,7 @@ html {
 	border: var(--border-green);
 }
 
-.search-field:active {
+.search-field--active {
 	background: var(--color-accent-1);
 	border: var(--border-brown);
 }
@@ -90,7 +81,7 @@ html {
 }
 
 .save-icon:hover {
-	color: var(--color-accent-2);
+	fill: var(--color-accent-2);
 }
 
 .shopping-bag-icon {
