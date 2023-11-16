@@ -10,3 +10,5 @@ const removeActiveClass = () => {
 
 searchField.addEventListener('focus', addActiveClass);
 searchField.addEventListener('blur', removeActiveClass);
+
+
