@@ -162,6 +162,11 @@ html {
 }
 
 
-
+/* footer styling */
+footer {
+	margin: 4rem;
+	font-size: var(--font-size-small);
+	text-align: center;
+}
 
 
