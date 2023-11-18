@@ -30,5 +30,9 @@ const searchBooks = () => {
 	}	
 };
 
-
+searchField.addEventListener('keypress', function(e) {
+	if (e.key === 'Enter') {
+		searchBooks();
+	}
+});
 
