@@ -16,19 +16,23 @@ searchField.addEventListener('blur', removeActiveClass);
 
 const searchBooks = () => {
 	const input = searchField.value.toLowerCase();
-	let bookContainers = document.querySelectorAll('.book__container');
+	const bookContainers = document.querySelectorAll('.book__container');
 
-	for (i = 0; i < bookContainers.length; i++) {
-		let bookTitle = document.querySelectorAll('.book__title').innerText.toLowerCase();
-		let bookAuthor = document. querySelectorAll('.book__author').innerText.toLowerCase();
+	for (let i = 0; i < bookContainers.length; i++) {
+		const titleElement = bookContainers[i].querySelector('.book__title');
+		const authorElement = bookContainers[i].querySelector('.book__author');
 
-		if (bookTitle.includes(input) || bookAuthor.includes(input)) {
-			bookContainers[i].style.display = '',
+		const title = titleElement ? titleElement.innerText.toLowerCase() : '';
+		const author = authorElement ? authorElement.innerText.toLowerCase() : '';
+
+		if (title.includes(input) || author.includes(input)) {
+			bookContainers[i].style.display = '';
 		} else {
-			bookContainers[i].style.display = 'none';
+			bookContainers[i].style.display = 'none'
 		}
-	}	
-};
+	}
+}
+
 
 searchField.addEventListener('keypress', function(e) {
 	if (e.key === 'Enter') {
