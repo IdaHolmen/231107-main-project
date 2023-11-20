@@ -77,6 +77,14 @@ html {
 }
 
 /* General styling for the book containers */
+.main-container {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: var(--spacing-superlarge);
+}
+
 .book__container {
 	cursor: pointer;
 	margin-top: var(--spacing-xxlarge);
