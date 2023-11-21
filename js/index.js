@@ -54,3 +54,4 @@ const toggleHamburgerMenu = () => {
 }
 
 hamburgerMenuButton.addEventListener('click', toggleHamburgerMenu);
+
