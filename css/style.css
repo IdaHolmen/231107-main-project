@@ -91,19 +91,19 @@ html {
 
 .hamburger__main-container {
 	margin-top: var(--spacing-xlarge);
-	margin-right: var(--spacing-xxxlarge);
+	margin-right: var(--spacing-xlarge);
 	width: 16rem;
 	height: 600px;
 	border: 2px solid black;
 	display: flex;
 	justify-content: flex-start;
+	display: none;
 }
 
 .main-container--pushed {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
 	gap: var(--spacing-xxxlarge);
 }
 

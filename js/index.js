@@ -45,10 +45,12 @@ searchField.addEventListener('keypress', function(e) {
 
 const hamburgerMenuButton = document.querySelector('.hamburger-menu');
 const hamburgerMenu = document.querySelector('.hamburger__main-container');
+const mainContainer = document.querySelector('.main-container');
 
+const toggleHamburgerMenu = () => {
+	hamburgerMenu.style.display = hamburgerMenu.style.display === 'block' ? 'none' : 'block';
 
+	mainContainer.classList.toggle('main-container--pushed');
+}
 
-hamburgerMenuButton.addEventListener('click', () => {
-	console.log('The button was clicked');
-
-}) 
+hamburgerMenuButton.addEventListener('click', toggleHamburgerMenu);
