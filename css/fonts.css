@@ -1,20 +1,2 @@
-@font-face {
-	font-family: 'Playfair Display';
-	src: url(../assets/PlayfairDisplay-Regular.woff2);
-	font-weight: 400;
-	font-style: normal;
-}
 
-@font-face {
-	font-family: 'Playfair Display';
-	src: url(../assets/PlayfairDisplay-Bold.woff2);
-	font-weight: 600;
-	font-style: bold;
-}
-
-@font-face {
-	font-family: 'Playfair Display';
-	src: url(../assets/PlayfairDisplay-Italic.woff2);
-	font-weight: 300;
-	font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
