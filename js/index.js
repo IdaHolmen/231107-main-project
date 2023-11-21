@@ -40,3 +40,9 @@ searchField.addEventListener('keypress', function(e) {
 	}
 });
 
+
+// HAMBURGER MENU
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+

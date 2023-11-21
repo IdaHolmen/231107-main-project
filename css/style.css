@@ -77,6 +77,10 @@ html {
 }
 
 /* General styling for the book containers */
+.content-container {
+	display: flex;
+}
+
 .main-container {
 	width: 100%;
 	display: flex;
@@ -85,9 +89,27 @@ html {
 	gap: var(--spacing-superlarge);
 }
 
+.hamburger__main-container {
+	margin-top: var(--spacing-xlarge);
+	margin-right: var(--spacing-xxxlarge);
+	width: 16rem;
+	height: 600px;
+	border: 2px solid black;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.main-container--pushed {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	gap: var(--spacing-xxxlarge);
+}
+
 .book__container {
 	cursor: pointer;
-	margin-top: var(--spacing-xxlarge);
+	margin-top: var(--spacing-xlarge);
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
