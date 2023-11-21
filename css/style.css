@@ -182,7 +182,7 @@ footer {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	/* display: none; */
+	display: none;
 }
 
 .hamburger__content {
@@ -197,7 +197,6 @@ footer {
 .sorting {
 	display: flex;
 	flex-direction: column;
-	background: red;
 	flex-basis: 30%;
 	width: 100%;
 }
@@ -207,7 +206,6 @@ footer {
 }
 
 .filtering {
-	background: lightblue;
 	display: flex;
 	flex-direction: column;
 	flex-basis: 70%;
