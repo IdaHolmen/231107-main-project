@@ -95,10 +95,9 @@ html {
 	width: 16rem;
 	height: 600px;
 	border: 2px solid black;
-	display: flex;
-	justify-content: flex-start;
 	display: none;
 }
+
 
 .main-container--pushed {
 	width: 100%;
