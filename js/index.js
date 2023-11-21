@@ -43,6 +43,12 @@ searchField.addEventListener('keypress', function(e) {
 
 // HAMBURGER MENU
 
-const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerMenuButton = document.querySelector('.hamburger-menu');
+const hamburgerMenu = document.querySelector('.hamburger__main-container');
 
 
+
+hamburgerMenuButton.addEventListener('click', () => {
+	console.log('The button was clicked');
+
+}) 
