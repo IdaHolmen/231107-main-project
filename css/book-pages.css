@@ -1,7 +1,86 @@
+body {
+	background: var(--color-primary);
+}
+
 .book-info-container {
 	font-family: 'Playfair Display', serif;
 	width: 100vw;
-	height: 100vh;
-	border: 2px solid black;
+	height: 50vh;
 	padding: var(--spacing-large);
+	display: flex;
+}
+
+.book-info__image {
+	width: 16rem;
+	height: 20rem;
+	object-fit: cover;
+	border-radius: var(--border-radius-small);
+}
+
+.book-info__title {
+	font-weight: 400;
+}
+
+.book-info__author {
+	font-weight: 400;
+}
+
+.book-info__text {
+	font-size: var(--font-size-small);
+}
+
+.text-container {
+	padding: 0 var(--spacing-large) 0 var(--spacing-large);
+	height: 20rem;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.book-info__headlines {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.page-info__bottom {
+	font-family: 'Playfair Display', serif;
+	width: 100vw;
+	height: 50vh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: var(--spacing-large);
+}
+
+.page-info__bottom-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.button-container {
+	display: flex;
+	align-items: flex-end;
+	margin-right:var(--spacing-large);
+}
+
+.add__button {
+	width: 12.5rem;
+	height: 2.5rem;
+	background: var(--color-button-primary);
+	color: var(--color-primary);
+	border-radius: var(--border-radius-medium);
+}
+
+.add__button:hover {
+	background: var(--color-button-secondary);
+}
+
+.add__button:active {
+	background: var(--color-button-tertiary);
+}
+
+.book-info__price {
+	font-size: var(--font-size-medium);
+	font-weight: 600;
 }
