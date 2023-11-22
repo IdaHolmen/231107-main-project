@@ -58,6 +58,11 @@ body {
 	justify-content: space-between;
 }
 
+.book__bold {
+	font-weight: 600;
+	color: var(--color-secondary);
+}
+
 /* buttons */
 
 .button-container {
