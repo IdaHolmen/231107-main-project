@@ -1,0 +1,7 @@
+.book-info-container {
+	font-family: 'Playfair Display', serif;
+	width: 100vw;
+	height: 100vh;
+	border: 2px solid black;
+	padding: var(--spacing-large);
+}
