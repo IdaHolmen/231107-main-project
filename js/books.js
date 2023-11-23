@@ -101,7 +101,7 @@ const books = [
 	title: 'Trines kokebok for unge kokker',
 	author: 'Trine Sandberg',
 	popular: false,
-	category: 'young adult' + 'kids',
+	category: 'young adult',
 	fiction: false,
 	},
 
