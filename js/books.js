@@ -189,3 +189,22 @@ categoryButtons.forEach(categoryButton => {
 	});
 });
 
+//filtering by fiction/non-fiction
+
+const fictionButtons = document.querySelectorAll('.fiction-button');
+
+fictionButtons.forEach(fictionButton => {
+	fictionButton.addEventListener('click', (event) => {
+		const fictionOrNonFiction = event.target.textContent;
+
+		const isFiction = fictionOrNonFiction.toLowerCase() === 'fiction';
+
+		bookContainers.forEach((container, index) => {
+			if (books[index].fiction === isFiction) {
+				container.style.display = 'block';
+			}  else {
+				container.style.display = 'none';
+			}
+		});
+	});
+});
