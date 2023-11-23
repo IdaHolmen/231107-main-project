@@ -208,3 +208,20 @@ fictionButtons.forEach(fictionButton => {
 		});
 	});
 });
+
+
+//filtering by bestsellers
+
+const bestsellerButton = document.querySelector('.bestseller-button');
+
+bestsellerButton.addEventListener('click', (event) => {
+	const bestsellerOrNot = event.target.textContent;
+
+	bookContainers.forEach((container, index) => {
+		if (books[index].popular === true) {
+			container.style.display = 'block';
+		} else {
+			container.style.display = 'none';
+		}
+	});
+});
