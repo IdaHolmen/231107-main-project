@@ -179,6 +179,12 @@ categoryButtons.forEach(categoryButton => {
 	categoryButton.addEventListener('click', (event) => {
 		const group = event.target.textContent;
 
+		categoryButtons.forEach(button => {
+			button.classList.remove('category-button--active');
+		});
+
+		event.target.classList.add('category-button--active');
+
 		bookContainers.forEach((container, index) => {
 			if (books[index].category === group.toLowerCase()) {
 				container.style.display = 'block';
