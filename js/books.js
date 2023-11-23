@@ -180,7 +180,7 @@ categoryButtons.forEach(categoryButton => {
 		const group = event.target.textContent;
 
 		bookContainers.forEach((container, index) => {
-			if (books[index].category.includes(group)) {
+			if (books[index].category === group.toLowerCase()) {
 				container.style.display = 'block';
 			} else {
 				container.style.display = 'none';
@@ -188,3 +188,4 @@ categoryButtons.forEach(categoryButton => {
 		});
 	});
 });
+
