@@ -5,7 +5,7 @@ const books = [
 	title: 'Harry Potter and the Prisoner of Azkaban',
 	author: 'J. K. Rowling',
 	popular: true,
-	group: 'young adult',
+	category: 'young adult',
 	fiction: true,
 	},
 
@@ -13,7 +13,7 @@ const books = [
 	title: 'The Hitchhikers Guide to the Galaxy',
 	author: 'Douglas Adams',
 	popular: true,
-	group: 'young adult',
+	category: 'young adult',
 	fiction: true,
 	},
 
@@ -21,7 +21,7 @@ const books = [
 	title: 'The Woman In Me',
 	author: 'Britney Spears',
 	popular: true,
-	group: 'adult',
+	category: 'adult',
 	fiction: false,
 	},
 
@@ -29,7 +29,7 @@ const books = [
 	title: 'The Snowcat Prince',
 	author: 'Dina Norlund',
 	popular: false,
-	group: 'kids',
+	category: 'kids',
 	fiction: true,
 	},
 
@@ -37,7 +37,7 @@ const books = [
 	title: 'Gone Girl',
 	author: 'Gillian Flynn',
 	popular: false,
-	group: 'adult',
+	category: 'adult',
 	fiction: true,
 	},
 
@@ -45,7 +45,7 @@ const books = [
 	title: 'Frida: A Biography of Frida Kahlo',
 	author: 'Hayden Herrera',
 	popular: false,
-	group: 'adult',
+	category: 'adult',
 	fiction: false,
 	},
 
@@ -53,7 +53,7 @@ const books = [
 	title: 'Hel Ved',
 	author: 'Lars Mytting',
 	popular: false,
-	group: 'adult',
+	category: 'adult',
 	fiction: false,
 	},
 
@@ -61,7 +61,7 @@ const books = [
 	title: 'Brillebjørn i svømmehallen',
 	author: 'Ida Jackson',
 	popular: false,
-	group: 'kids',
+	category: 'kids',
 	fiction: true,
 	},
 
@@ -69,7 +69,7 @@ const books = [
 	title: 'Mistborn: The Final Empire',
 	author: 'Brandon Sanderson',
 	popular: false,
-	group: 'young adult',
+	category: 'young adult',
 	fiction: true,
 	},
 
@@ -77,7 +77,7 @@ const books = [
 	title: 'Fysikkmagi',
 	author: 'Andreas Wahl',
 	popular: true,
-	group: 'kids',
+	category: 'kids',
 	fiction: false,
 	},
 
@@ -85,7 +85,7 @@ const books = [
 	title: 'Min skyld',
 	author: 'Abid Raja',
 	popular: true,
-	group: 'adult',
+	category: 'adult',
 	fiction: false,
 	},
 
@@ -93,7 +93,7 @@ const books = [
 	title: 'Gjentakelsen',
 	author: 'Vigdis Hjorth',
 	popular: false,
-	group: 'adult',
+	category: 'adult',
 	fiction: true,
 	},
 
@@ -101,7 +101,7 @@ const books = [
 	title: 'Trines kokebok for unge kokker',
 	author: 'Trine Sandberg',
 	popular: false,
-	group: 'young adult' + 'kids',
+	category: 'young adult' + 'kids',
 	fiction: false,
 	},
 
@@ -109,7 +109,7 @@ const books = [
 	title: 'Tungtvannsaksjonen',
 	author: 'John S. Jamtli',
 	popular: false,
-	group: 'young adult',
+	category: 'young adult',
 	fiction: false,
 	},
 
@@ -117,7 +117,7 @@ const books = [
 	title: 'Ruffen på nye eventyr',
 	author: 'Tor Åge Bringsværd',
 	popular: false,
-	group: 'kids',
+	category: 'kids',
 	fiction: true,
 	},
 
@@ -125,7 +125,7 @@ const books = [
 	title: 'Farvel, Farah Diba',
 	author: 'Karin Fossum',
 	popular: false,
-	group: 'adult',
+	category: 'adult',
 	fiction: true,
 	},
 
@@ -133,7 +133,7 @@ const books = [
 	title: 'Den lille larven Aldrimett',
 	author: 'Erik Carle',
 	popular: true,
-	group: 'kids',
+	category: 'kids',
 	fiction: true,
 	},
 
@@ -141,7 +141,7 @@ const books = [
 	title: 'De uverdige',
 	author: 'Roy Jacobsen',
 	popular: false,
-	group: 'adult',
+	category: 'adult',
 	fiction: true,
 	},
 
@@ -149,7 +149,7 @@ const books = [
 	title: 'Anatomi for småtasser',
 	author: 'Jonathan Litton',
 	popular: true,
-	group: 'kids',
+	category: 'kids',
 	fiction: false,
 	},
 
@@ -157,7 +157,7 @@ const books = [
 	title: 'Pulskuren',
 	author: 'Torkil Færø',
 	popular: true,
-	group: 'adult',
+	category: 'adult',
 	fiction: false,
 	},
 
@@ -165,20 +165,26 @@ const books = [
 	title: 'Boken som ikke ville bli lest',
 	author: 'David Sundin',
 	popular: false,
-	group: 'kids',
+	category: 'kids',
 	fiction: true,
 	},
 ]
 
-//filtering 
+//filtering by categories
 
-const filterButtons = document.querySelectorAll('.filter-button');
+const categoryButtons = document.querySelectorAll('.category-button');
 const bookContainers = document.querySelectorAll('.book__container');
 
-filterButtons.forEach(filterButton => {
-	const filterBooks = () => {
-		console.log('Filter the list');
-	}
+categoryButtons.forEach(categoryButton => {
+	categoryButton.addEventListener('click', (event) => {
+		const group = event.target.textContent;
 
-	filterButton.addEventListener('click', filterBooks);
+		bookContainers.forEach((container, index) => {
+			if (books[index].category.includes(group)) {
+				container.style.display = 'block';
+			} else {
+				container.style.display = 'none';
+			}
+		});
+	});
 });

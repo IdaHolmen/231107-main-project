@@ -59,11 +59,19 @@
 	background: var(--color-primary);
 }
 
-.sort-button:hover, .filter-button:hover {
+.category-button {
+	height: 2.5rem;
+	width: 8rem;
+	margin: 0.4rem;
+	border-radius: var(--border-radius-small);
+	background: var(--color-primary);
+}
+
+.sort-button:hover, .filter-button:hover, .category-button:hover {
 	background: var(--color-search-bar);
 }
 
-.sort-button--active, .filter-button--active {
+.sort-button--active, .filter-button--active, .category-button--active {
 	background-color: black;
 	color: var(--color-primary);
 }
