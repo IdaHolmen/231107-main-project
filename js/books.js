@@ -175,10 +175,10 @@ const books = [
 const filterButtons = document.querySelectorAll('.filter-button');
 const bookContainers = document.querySelectorAll('.book__container');
 
-filterButtons.forEach(button => {
+filterButtons.forEach(filterButton => {
 	const filterBooks = () => {
 		console.log('Filter the list');
 	}
 
-	button.addEventListener('click', filterBooks);
+	filterButton.addEventListener('click', filterBooks);
 });
