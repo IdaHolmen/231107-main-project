@@ -237,3 +237,25 @@ bestsellerButton.addEventListener('click', (event) => {
 		}
 	});
 });
+
+
+// sorting
+const sortTitleButton = document.querySelector('.sort-title-button');
+
+sortingButtons.addEventListener('click', ()=> {
+	
+	books.sort((a, b) => {
+		const titleA = a.title.toUpperCase();
+		const titleB = b.title.toUpperCase();
+
+		if (titleA < titleB) {
+			return -1;
+		} 
+
+		if (titleA > titleB) {
+			return 1;
+		}
+
+		return 0;
+	});
+});
