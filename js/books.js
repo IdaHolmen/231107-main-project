@@ -169,3 +169,16 @@ const books = [
 	fiction: true,
 	},
 ]
+
+//filtering 
+
+const filterButtons = document.querySelectorAll('.filter-button');
+const bookContainers = document.querySelectorAll('.book__container');
+
+filterButtons.forEach(button => {
+	const filterBooks = () => {
+		console.log('Filter the list');
+	}
+
+	button.addEventListener('click', filterBooks);
+});
