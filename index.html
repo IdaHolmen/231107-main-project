@@ -44,8 +44,8 @@
 				<div class="hamburger__content">
 					<div class="sorting">
 						<p class="hamburger-headline">Sort by:</p>
-						<button class="sort-author-button">Author</button>
-						<button class="sort-title-button">Title</button>
+						<button class="sort-button" data-sort-by="author">Author</button>
+						<button class="sort-button" data-sort-by="title">Title</button>
 					</div>
 					<div class="filtering">
 						<p class="hamburger-headline">Filter by:</p>
@@ -66,7 +66,7 @@
 			
 			
 			<!-- J.K. Rowling - Harry Potter and the Prisoner of Azkaban-->
-			<a href="./book1.html" class="book__container book-1" data-index="0">
+			<a href="./book1.html" class="book__container book-1" data-index="0" data-title="harry potter and the prisoner of azkaban" data-author="jk rowling">
 				<img class="book__image" src="./assets/images/pexels-rdne-stock-project-7978816.jpg" alt="Two wands laying in a cross formation">
 
 				<div class="book__info">
@@ -81,7 +81,7 @@
 			</a>
 
 				<!-- Douglas Adams - The Hitchhiker's Guide to the Galaxy -->
-			<a href="./book2.html" class="book__container book-2" data-index="1">
+			<a href="./book2.html" class="book__container book-2" data-index="1" data-title="the hitchhikers guide to the galaxy" data-author="douglas adams">
 				<img class="book__image" src="./assets/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg" alt="A galaxy with many nice colors">
 
 				<div class="book__info">
@@ -96,7 +96,7 @@
 			</a>
 
 			<!-- Britney Spears - The woman in me -->
-			<a href="./book3.html" class="book__container book-3" data-index="2">
+			<a href="./book3.html" class="book__container book-3" data-index="2" data-title="the woman in me" data-author="britney spears">
 				<img class="book__image" src="./assets/images/kelvin-moquete-LOV7Gbmgm30-unsplash.jpg" alt="Fans reaching their hands out">
 
 				<div class="book__info">
@@ -111,7 +111,7 @@
 			</a>
 
 			<!-- Dina Norlund - The Snowcat Prince -->
-			<a href="./book4.html" class="book__container book-4" data-index="3">
+			<a href="./book4.html" class="book__container book-4" data-index="3" data-title="the snowcat prince" data-author="dina norlund">
 				<img class="book__image" src="./assets/images/enrico-mantegazza-SIgxkS-ZPm8-unsplash.jpg" alt="Cat footprints in the snow">
 
 				<div class="book__info">
@@ -126,7 +126,7 @@
 			</a>
 
 			<!-- Gillian Flynn - Gone Girl -->
-			<a href="./book5.html" class="book__container book-5" data-index="4">
+			<a href="./book5.html" class="book__container book-5" data-index="4" data-title="gone girl" data-author="gillian flynn">
 				<img class="book__image" src="./assets/images/anthony-tran-lSp3WGaAZlI-unsplash.jpg" alt="A mysterious girl in a field of sunflowers">
 
 				<div class="book__info">
@@ -141,7 +141,7 @@
 			</a>
 
 			<!-- Hayden Herrera - Frida: A Biography of Frida Kahlo  -->
-			<a href="./book6.html" class="book__container book-6" data-index="5">
+			<a href="./book6.html" class="book__container book-6" data-index="5" data-title="frida" data-author="hayden herrera">
 				<img class="book__image" src="./assets/images/daniele-franchi-cnh852P8Kqg-unsplash.jpg" alt="A sea of flowers with a woman show looks similar to Frida Kahlo in the background">
 
 				<div class="book__info">
@@ -156,7 +156,7 @@
 			</a>
 
 			<!-- Hel Ved - Lars Mytting -->
-			<a href="./book7.html" class="book__container book-7" data-index="6">
+			<a href="./book7.html" class="book__container book-7" data-index="6" data-title="hel ved" data-author="lars mytting">
 				<img class="book__image" src="./assets/images/alexandre-jaquetoni-6yelWDI3RE8-unsplash.jpg" alt="A neat stack of wood">
 
 				<div class="book__info">
@@ -171,7 +171,7 @@
 			</a>
 
 			<!-- Ida Jackson - Brillebjørn i svømmehallen -->
-			<a href="./book8.html" class="book__container book-8" data-index="7">
+			<a href="./book8.html" class="book__container book-8" data-index="7" data-title="brillebjørn i svømmehallen" data-author="ida jackson">
 				<img class="book__image" src="./assets/images/katie-smith-2sSAKjP79rU-unsplash.jpg" alt="Childrens dinosaur toys by a pool">
 
 				<div class="book__info">
@@ -186,7 +186,7 @@
 			</a>
 
 			<!-- Brandon Sanderson - Mistborn: The Final Empire -->
-			<a href="./book9.html" class="book__container book-9" data-index="8">
+			<a href="./book9.html" class="book__container book-9" data-index="8" data-title="mistborn" data-author="brandon sanderson">
 				<img class="book__image" src="./assets/images/sebin-thomas-OdBFUurPHjo-unsplash.jpg" alt="A wooden trail surrounded by mist">
 
 				<div class="book__info">
@@ -201,7 +201,7 @@
 			</a>
 
 			<!-- Andreas Wahl - Fysikkmagi -->
-			<a href="./book10.html" class="book__container book-10" data-index="9">
+			<a href="./book10.html" class="book__container book-10" data-index="9" data-title="fysikkmagi" data-author="andreas wahl">
 				<img class="book__image" src="./assets/images/artturi-jalli-gYrYa37fAKI-unsplash.jpg" alt="A blackboard with E=mc² drawn in chalk">
 
 				<div class="book__info">
@@ -216,7 +216,7 @@
 			</a>
 
 			<!-- Abid Raja - Min Skyld - en historie om frigjøring -->
-			<a href="./book11.html" class="book__container book-11" data-index="10">
+			<a href="./book11.html" class="book__container book-11" data-index="10" data-title="min skyld" data-author="abid raja">
 				<img class="book__image" src="./assets/images/anna-keibalo-GaAzt6_akKo-unsplash.jpg" alt="Two hands reaching for each other">
 
 				<div class="book__info">
@@ -231,7 +231,7 @@
 			</a>
 
 			<!-- Vigdis Hjorth - Gjentakelsen -->
-			<a href="./book12.html" class="book__container book-12" data-index="11">
+			<a href="./book12.html" class="book__container book-12" data-index="11" data-title="gjentakelsen" data-author="vigdis hjorth">
 				<img class="book__image" src="./assets/images/susan-wilkinson-bFv8pjrMS5k-unsplash.jpg" alt="An abstract image of colored water drops">
 
 				<div class="book__info">
@@ -246,7 +246,7 @@
 			</a>
 
 			<!-- Trine Sandberg - Trines kokebok for unge kokker -->
-			<a href="./book13.html" class="book__container book-13" data-index="12">
+			<a href="./book13.html" class="book__container book-13" data-index="12" data-title="trines kokebok" data-author="trine sanberg">
 				<img class="book__image" src="./assets/images/calum-lewis-vA1L1jRTM70-unsplash.jpg" alt="Assorted spices spread around on a table top">
 
 				<div class="book__info">
@@ -261,7 +261,7 @@
 			</a>
 
 			<!-- John S. Jamtli - Tungtvannsaksjonen -->
-			<a href="./book14.html" class="book__container book-14" data-index="13">
+			<a href="./book14.html" class="book__container book-14" data-index="13" data-title="tungtvannsaksjonen" data-author="john s jamtli">
 				<img class="book__image" src="./assets/images/national-library-of-scotland-TS30oWbWCvU-unsplash.jpg" alt="Two soldiers, covered in snow, lighting a cigarette">
 
 				<div class="book__info">
@@ -276,7 +276,7 @@
 			</a>
 
 			<!-- Tor Åge Bringsværd - Ruffen på nye eventyr -->
-			<a href="./book15.html" class="book__container book-15" data-index="14">
+			<a href="./book15.html" class="book__container book-15" data-index="14" data-title="ruffen" data-author="tor åge bringsværd">
 				<img class="book__image" src="./assets/images/cheng-qi-huang-L58875oF03w-unsplash.jpg" alt="Childrens drawings on a white brick wall">
 
 				<div class="book__info">
@@ -291,7 +291,7 @@
 			</a>
 
 			<!-- Karin Fossum - Farvel, Farah Diba -->
-			<a href="./book16.html" class="book__container book-16" data-index="15">
+			<a href="./book16.html" class="book__container book-16" data-index="15" data-title="farvel, farah diba" data-author="karin fossum">
 				<img class="book__image" src="./assets/images/jon-butterworth-rXjSnBx8Kuc-unsplash.jpg" alt="A skull laying on a forest floor">
 
 				<div class="book__info">
@@ -306,7 +306,7 @@
 			</a>
 
 			<!-- Erik Carle - The Very Hungry Caterpillar -->
-			<a href="./book17.html" class="book__container book-17" data-index="16">
+			<a href="./book17.html" class="book__container book-17" data-index="16" data-title="the very hungry caterpillar" data-author="erik carle">
 				<img class="book__image" src="./assets/images/joshua-j-cotten-MIIFx3eEaVI-unsplash.jpg" alt="A caterpillar going up a leaf">
 
 				<div class="book__info">
@@ -321,7 +321,7 @@
 			</a>
 
 			<!-- Roy Jacobsen - De uverdige -->
-			<a href="./book18.html" class="book__container book-18" data-index="17">
+			<a href="./book18.html" class="book__container book-18" data-index="17" data-title="de uverdige" data-author="roy jacobsen">
 				<img class="book__image" src="./assets/images/yngve-windsland-Y4X1vM4FVfA-unsplash.jpg" alt="Bjørvika in Oslo seen at night">
 
 				<div class="book__info">
@@ -336,7 +336,7 @@
 			</a>
 
 			<!-- Jonathan Litton - Anatomi for småtasser -->
-			<a href="./book19.html" class="book__container book-19" data-index="18">
+			<a href="./book19.html" class="book__container book-19" data-index="18" data-title="anatomi for småtasser" data-author="jonathan litton">
 				<img class="book__image" src="./assets/images/kira-auf-der-heide-_Zd6COnH5E8-unsplash.jpg" alt="A wooden anatomy figurine">
 
 				<div class="book__info">
@@ -351,7 +351,7 @@
 			</a>
 
 			<!-- Torkil Færø - Pulskuren -->
-			<a href="./book20.html" class="book__container book-20" data-index="19">
+			<a href="./book20.html" class="book__container book-20" data-index="19" data-title="pulskuren" data-author="torkil færø">
 				<img class="book__image" src="./assets/images/tim-foster-Odhl-kitI2c-unsplash.jpg" alt="A person holding out their wrist with a pulse watch on it">
 
 				<div class="book__info">
@@ -366,7 +366,7 @@
 			</a>
 
 			<!-- David Sundin - Boken som ikke ville bli lest -->
-			<a href="./book21.html" class="book__container book-21" data-index="20">
+			<a href="./book21.html" class="book__container book-21" data-index="20" data-title="boken som ikke ville bli lest" data-author="david sundin">
 				<img class="book__image" src="./assets/images/jaredd-craig-HH4WBGNyltc-unsplash.jpg" alt="An open book levitating in the middle of a lot of other books">
 
 				<div class="book__info">
