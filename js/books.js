@@ -170,6 +170,7 @@ const books = [
 	},
 ]
 
+
 //filtering by categories
 
 const categoryButtons = document.querySelectorAll('.category-button');
@@ -238,13 +239,17 @@ bestsellerButton.addEventListener('click', (event) => {
 	});
 });
 
-
 // sorting by title
 const sortingTitlesButtons = document.querySelectorAll('.sort-title-button');
 
 const sortTitles = (event) => {
 	const currentButton = event.currentTarget;
-	const currentButtonSortBy = currentButton.dataset.sortBy;
+	
+	sortingTitlesButtons.forEach(button => {
+		button.classList.remove('sort-title-button--active');
+	});
+
+	currentButton.classList.add('sort-title-button--active');
 
 	const sortedTitles = [...bookContainers].sort((a, b) => {
 		if (a.dataset.title > b.dataset.title) {
@@ -268,7 +273,12 @@ const sortingAuthorsButton = document.querySelectorAll('.sort-author-button');
 
 const sortAuthor = (event) => {
 	const currentButton = event.currentTarget;
-	const currentButtonSortBy = currentButton.dataset.sortBy;
+
+	sortingTitlesButtons.forEach(button => {
+		button.classList.remove('sort-title-button--active');
+	});
+
+	currentButton.classList.add('sort-title-button--active');
 
 	const sortedAuthors = [...bookContainers].sort((a, b) => {
 		if (a.dataset.author > b.dataset.author) {
