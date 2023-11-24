@@ -242,8 +242,6 @@ bestsellerButton.addEventListener('click', (event) => {
 // sorting by title
 const sortingButtons = document.querySelectorAll('.sort-button');
 
-let sortOrder = 'asc';
-
 const sortTitles = (event) => {
 	const currentButton = event.currentTarget;
 	const currentButtonSortBy = currentButton.dataset.sortBy;
@@ -263,4 +261,26 @@ const sortTitles = (event) => {
 
 sortingButtons.forEach(sortButton => {
 	sortButton.addEventListener('click', sortTitles);
+});
+
+//sorting by author
+const sortAuthor = (event) => {
+	const currentButton = event.currentTarget;
+	const currentButtonSortBy = currentButton.dataset.sortBy;
+
+	const sortedAuthors = [...bookContainers].sort((a, b) => {
+		if (a.dataset.author > b.dataset.author) {
+			return 1;
+		} else {
+			return -1;
+		}
+	});
+	
+	sortedAuthors.forEach(item => {
+		mainContainer.appendChild(item);
+	})
+}
+
+sortingButtons.forEach(sortButton => {
+	sortButton.addEventListener('click', sortAuthor);
 })
