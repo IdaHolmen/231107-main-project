@@ -52,7 +52,12 @@
 }
 
 
-.sort-title-button:hover, .sort-author-button:hover, .filter-button:hover, .category-button:hover, .fiction-button:hover, .bestseller-button:hover {
+.sort-title-button:not(.sort-title-button--active):hover,
+.sort-author-button:not(.sort-author-button--active):hover,
+.filter-button:not(.filter-button--active):hover,
+.category-button:not(.category-button--active):hover,
+.fiction-button:not(.fiction-button--active):hover,
+.bestseller-button:not(.bestseller-button--active):hover {
 	background: var(--color-search-bar);
 }
 
