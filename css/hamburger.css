@@ -1,6 +1,6 @@
 /* Hamburger menu styling */ 
 .hamburger__main-container {
-	margin-top: var(--spacing-xlarge);
+	margin-top: var(--spacing-large);
 	margin-right: var(--spacing-xlarge);
 	background: var(--color-primary);
 	width: 18rem;

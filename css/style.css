@@ -98,7 +98,7 @@ html {
 
 .book__container {
 	cursor: pointer;
-	margin-top: var(--spacing-xlarge);
+	margin-top: var(--spacing-large);
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
