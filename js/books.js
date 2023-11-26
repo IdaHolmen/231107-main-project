@@ -257,18 +257,8 @@ const sort = (event) => {
 	}
 }
 
-//sorting by author
-const sortingAuthorsButton = document.querySelectorAll('.sort-author-button');
-
+//sorting by author 
 const sortAuthor = (event) => {
-	const currentButton = event.currentTarget;
-
-	sortingTitlesButtons.forEach(button => {
-		button.classList.remove('sort-title-button--active');
-	});
-
-	currentButton.classList.add('sort-title-button--active');
-
 	const sortedAuthors = [...bookContainers].sort((a, b) => {
 		if (a.dataset.author > b.dataset.author) {
 			return 1;
@@ -276,12 +266,23 @@ const sortAuthor = (event) => {
 			return -1;
 		}
 	});
-	
+
 	sortedAuthors.forEach(item => {
 		mainContainer.appendChild(item);
 	});
 }
 
-sortingAuthorsButton.forEach(sortButton => {
-	sortButton.addEventListener('click', sortAuthor);
-});
+//sorting by title
+const sortTitles = (event) => {
+	const sortedTitles = [...bookContainers].sort((a, b) => {
+		if (a.dataset.title > b.dataset.title) {
+			return 1;
+		} else {
+			return -1;
+		}
+	});
+
+	sortedTitles.forEach(item => {
+		mainContainer.appendChild(item);
+	});
+}
