@@ -251,11 +251,15 @@ const sort = (event) => {
 	currentButton.classList.add('sort-button--active');
 
 	if (currentButton.id === 'sort-author') {
-		sortTitles(event);
-	} else if (currentButton.id === 'sort-title') {
 		sortAuthor(event);
+	} else if (currentButton.id === 'sort-title') {
+		sortTitles(event);
 	}
 }
+
+sortingButtons.forEach(sortButton =>{
+	sortButton.addEventListener('click', sort);
+})
 
 //sorting by author 
 const sortAuthor = (event) => {
