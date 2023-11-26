@@ -239,34 +239,23 @@ bestsellerButton.addEventListener('click', (event) => {
 	});
 });
 
-// sorting by title
-const sortingTitlesButtons = document.querySelectorAll('.sort-title-button');
+// SORTING FUNCTIONS
+const sortingButtons = document.querySelectorAll('.sort-button');
 
-const sortTitles = (event) => {
+const sort = (event) => {
+	sortingButtons.forEach(button => {
+		button.classList.remove('sort-button-active');
+	})
+
 	const currentButton = event.currentTarget;
-	
-	sortingTitlesButtons.forEach(button => {
-		button.classList.remove('sort-title-button--active');
-	});
+	currentButton.classList.add('sort-button--active');
 
-	currentButton.classList.add('sort-title-button--active');
-
-	const sortedTitles = [...bookContainers].sort((a, b) => {
-		if (a.dataset.title > b.dataset.title) {
-			return 1;
-		} else {
-			return -1;
-		}
-	});
-
-	sortedTitles.forEach(item => {
-		mainContainer.appendChild(item);
-	});
+	if (currentButton.id === 'sort-author') {
+		sortTitles(event);
+	} else if (currentButton.id === 'sort-title') {
+		sortAuthor(event);
+	}
 }
-
-sortingTitlesButtons.forEach(sortButton => {
-	sortButton.addEventListener('click', sortTitles);
-});
 
 //sorting by author
 const sortingAuthorsButton = document.querySelectorAll('.sort-author-button');
