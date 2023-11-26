@@ -187,13 +187,13 @@ categoryButtons.forEach(categoryButton => {
 
 		if (isActive) {
 			bookContainers.forEach(container => {
-				container.style.display = 'block';
+				container.style.display = 'flex';
 			});
 		} else {
 			event.target.classList.add('category-button--active');
 			bookContainers.forEach((container, index) => {
 				if (books[index].category === group.toLowerCase()) {
-					container.style.display = 'block';
+					container.style.display = 'flex';
 				} else {
 					container.style.display = 'none';
 				}
@@ -214,7 +214,7 @@ fictionButtons.forEach(fictionButton => {
 
 		bookContainers.forEach((container, index) => {
 			if (books[index].fiction === isFiction) {
-				container.style.display = 'block';
+				container.style.display = 'flex';
 			}  else {
 				container.style.display = 'none';
 			}
@@ -232,7 +232,7 @@ bestsellerButton.addEventListener('click', (event) => {
 
 	bookContainers.forEach((container, index) => {
 		if (books[index].popular === true) {
-			container.style.display = 'block';
+			container.style.display = 'flex';
 		} else {
 			container.style.display = 'none';
 		}
