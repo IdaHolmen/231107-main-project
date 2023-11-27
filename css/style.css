@@ -6,6 +6,7 @@ html {
 /* Styling for top part of header */
 .header-top {
 	display: flex;
+	justify-content: space-between;
 	height: 9.375rem;
 	width: 100%;
 	flex-flow: row nowrap;
@@ -17,13 +18,26 @@ html {
 	width: 100%;
 }
 
-
 .header__headline {
 	font-size: var(--font-size-headline);
 	color: var(--color-secondary);
+	flex-basis: 80%;
+	text-align: center;
 }
 
+.hamburger-menu {
+	flex-basis: 10%;
+	width: 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+}
 
+.shopping-bag-icon {
+	flex-basis: 10%;
+	width: 2.3rem;
+	height: 2.3rem;
+	cursor: pointer;
+}
 /* Styling for bottom part of header */
 .header-bottom {
 	display: flex;
@@ -32,19 +46,6 @@ html {
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-}
-
-.header-bottom__container {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-}
-
-.hamburger-menu {
-	flex-basis: 10%;
-	width: 2.5rem;
-	height: 2.5rem;
-	cursor: pointer;
 }
 
 .search-field {
@@ -68,12 +69,7 @@ html {
 }
 
 
-.shopping-bag-icon {
-	flex-basis: 10%;
-	width: 2.3rem;
-	height: 2.3rem;
-	cursor: pointer;
-}
+
 
 /* General styling for the book containers */
 .content-container {
