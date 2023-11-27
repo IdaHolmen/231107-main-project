@@ -48,9 +48,12 @@ html {
 	align-items: center;
 }
 
-
+.search-container {
+	position: relative;	
+}
 
 .search-field {
+	display: inline-block;
 	outline: none;
 	width: 25rem;
 	height: 2.5rem;
@@ -58,23 +61,21 @@ html {
 	border-radius: var(--border-radius-large);
 	border: none;
 	background: var(--color-search-bar);
-	position: relative;	
 }
 
-.search-field:before {
-	content: "";
-	position: absolute;
-	left: 0.625rem;
-	top: 0;
-	bottom: 0;
-	width: 1.25rem;
-	background: url("../assets/icons/magnifying-glass-light.svg");
-}
 .search-field--active {
 	background: var(--color-accent-1);
 	border: var(--border-brown);
 }
 
+.search-symbol {
+	position: absolute;
+	display: inline-block;
+	width: 1.7rem;
+	height: 1.7rem;
+	left: 22rem;
+	top: 6px;
+}
 
 /* General styling for the book containers */
 .content-container {
