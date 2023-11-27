@@ -4,3 +4,6 @@ All images are from Unsplash.com and all the book titles and authors are just me
 https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+Used this code to put the svg in the search field
+https://codepen.io/anon/pen/wizIp
