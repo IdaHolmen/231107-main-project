@@ -160,14 +160,6 @@ const books = [
 	category: 'adult',
 	fiction: false,
 	},
-
-	{
-	title: 'Boken som ikke ville bli lest',
-	author: 'David Sundin',
-	popular: false,
-	category: 'kids',
-	fiction: true,
-	},
 ]
 
 
