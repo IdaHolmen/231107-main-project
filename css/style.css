@@ -48,6 +48,8 @@ html {
 	align-items: center;
 }
 
+
+
 .search-field {
 	outline: none;
 	width: 25rem;
@@ -56,8 +58,18 @@ html {
 	border-radius: var(--border-radius-large);
 	border: none;
 	background: var(--color-search-bar);
+	position: relative;	
 }
 
+.search-field:before {
+	content: "";
+	position: absolute;
+	left: 0.625rem;
+	top: 0;
+	bottom: 0;
+	width: 1.25rem;
+	background: url("../assets/icons/magnifying-glass-light.svg");
+}
 .search-field--active {
 	background: var(--color-accent-1);
 	border: var(--border-brown);
