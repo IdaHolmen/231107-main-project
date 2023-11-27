@@ -7,7 +7,7 @@ html {
 .header-top {
 	display: flex;
 	justify-content: space-between;
-	height: 9.375rem;
+	height: 7.5rem;
 	width: 100%;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -41,7 +41,7 @@ html {
 /* Styling for bottom part of header */
 .header-bottom {
 	display: flex;
-	height: 5rem;
+	height: 2.5rem;
 	width: 100%;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -50,8 +50,7 @@ html {
 
 .search-field {
 	outline: none;
-	flex-basis: 30%;
-	width: 20rem;
+	width: 25rem;
 	height: 2.5rem;
 	text-align: center;
 	border-radius: var(--border-radius-large);
@@ -69,8 +68,6 @@ html {
 }
 
 
-
-
 /* General styling for the book containers */
 .content-container {
 	display: flex;
@@ -81,7 +78,7 @@ html {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	gap: var(--spacing-superlarge);
+	gap: var(--spacing-large);
 }
 
 
@@ -89,7 +86,7 @@ html {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
-	gap: var(--spacing-xxxlarge);
+	gap: var(--spacing-large);
 }
 
 .book__container {

@@ -1,9 +1,9 @@
 /* Hamburger menu styling */ 
 .hamburger__main-container {
 	margin-top: var(--spacing-small);
-	margin-right: var(--spacing-xlarge);
+	margin-right: var(--spacing-medium);
 	background: var(--color-primary);
-	width: 18rem;
+	width: 16rem;
 	height: 600px;
 	border-radius: 0 15px 15px 0;
 	box-shadow: 0 0 8px grey;
