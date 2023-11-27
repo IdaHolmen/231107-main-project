@@ -58,10 +58,6 @@ html {
 	background: var(--color-search-bar);
 }
 
-.search-field:hover {
-	border: var(--border-green);
-}
-
 .search-field--active {
 	background: var(--color-accent-1);
 	border: var(--border-brown);
