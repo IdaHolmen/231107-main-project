@@ -1,0 +1,39 @@
+.checkout-container {
+	display: none;
+	opacity: 100;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 31.25rem;
+	height: 46.5rem;
+	z-index: 2;
+	background: var(--color-primary);
+	border: var(--border-black);
+}
+
+.book__container--blurred {
+	opacity: 0.5;
+	cursor: pointer;
+	margin-top: var(--spacing-large);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 16rem;
+	height: 22.875rem;
+	border: var(--border-black);
+	border-radius: var(--border-radius-sm-medium);
+	padding: var(--spacing-small);
+}
+
+.header--blurred {
+	opacity: 0.5;
+}
+
+.exit-icon {
+	cursor: pointer;
+	height: 2.3rem;
+	width: 2.3rem;
+	margin: var(--spacing-small);
+}
+

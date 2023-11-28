@@ -55,3 +55,27 @@ const toggleHamburgerMenu = () => {
 
 hamburgerMenuButton.addEventListener('click', toggleHamburgerMenu);
 
+
+
+//CHECKOUT 
+
+const checkoutMenuButton = document.querySelector('.shopping-bag-icon');
+const checkoutMenu = document.querySelector('.checkout-container');
+const crossOutMenuButton = document.querySelector('.exit-icon');
+const headerContainer = document.querySelector('.header');
+
+const displayCheckoutMenu = () => {
+	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
+
+	bookContainers.classList.add('book__container--blurred');
+	headerContainer.classList.add('header--blurred');
+}
+checkoutMenuButton.addEventListener('click', displayCheckoutMenu);
+
+const crossOutMenu = () => {
+	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
+
+	bookContainers.classList.remove('book__container--blurred');
+	headerContainer.classList.remove('header--blurred');
+}
+checkoutMenu.addEventListener('click', crossOutMenu);
