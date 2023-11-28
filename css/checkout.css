@@ -10,6 +10,23 @@
 	border: var(--border-black);
 }
 
+.checkout-container__content {
+	width: 100%;	
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+} 
+
+.checkout-container-top {
+	display: flex;
+	justify-content: center;
+}
+
+.checkout-container-bottom {
+	display: flex;
+}
+
 .book__container--blurred {
 	filter: blur(0.3rem);
 	cursor: pointer;
@@ -33,6 +50,32 @@
 	cursor: pointer;
 	height: 2.3rem;
 	width: 2.3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
 	margin: var(--spacing-small);
 }
+.checkout-headline {
+	margin-top: 5px;
+	text-align: center;
+	font-size: var(--font-size-medium);
+	color: var(--color-secondary);
 
+}
+
+.checkout-page__button {
+	width: 12.5rem;
+	height: 2.813rem;
+	background: var(--color-button-primary);
+	color: var(--color-primary);
+	border-radius: var(--border-radius-medium);
+	font-size: var(--font-size-small);
+	position: absolute;
+	bottom: var(--spacing-small);
+	right: var(--spacing-small);
+}
+
+.total-price {
+	margin: var(--spacing-small);
+	font-size: var(--font-size-sm-medium);
+}
