@@ -66,16 +66,20 @@ const headerContainer = document.querySelector('.header');
 
 const displayCheckoutMenu = () => {
 	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
-
-	bookContainers.classList.add('book__container--blurred');
-	headerContainer.classList.add('header--blurred');
+	
+	const bookContainers = document.querySelectorAll('.book__container');
+	bookContainers.forEach(bookContainer => bookContainer.classList.toggle('.book__container--blurred'));
+	
+	headerContainer.classList.toggle('header--blurred');
 }
 checkoutMenuButton.addEventListener('click', displayCheckoutMenu);
 
 const crossOutMenu = () => {
 	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
 
-	bookContainers.classList.remove('book__container--blurred');
-	headerContainer.classList.remove('header--blurred');
+	const bookContainers = document.querySelectorAll('.book__container');
+	bookContainers.forEach(bookContainer => bookContainer.classList.toggle('.book__container--blurred'));
+	
+	headerContainer.classList.toggle('header--blurred');
 }
 checkoutMenu.addEventListener('click', crossOutMenu);
