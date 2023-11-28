@@ -68,7 +68,7 @@ const displayCheckoutMenu = () => {
 	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
 	
 	const bookContainers = document.querySelectorAll('.book__container');
-	bookContainers.forEach(bookContainer => bookContainer.classList.toggle('.book__container--blurred'));
+	bookContainers.forEach(bookContainer => bookContainer.classList.toggle('book__container--blurred'));
 	
 	headerContainer.classList.toggle('header--blurred');
 }
@@ -78,7 +78,7 @@ const crossOutMenu = () => {
 	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
 
 	const bookContainers = document.querySelectorAll('.book__container');
-	bookContainers.forEach(bookContainer => bookContainer.classList.toggle('.book__container--blurred'));
+	bookContainers.forEach(bookContainer => bookContainer.classList.toggle('book__container--blurred'));
 	
 	headerContainer.classList.toggle('header--blurred');
 }
