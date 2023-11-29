@@ -89,12 +89,35 @@ checkoutMenu.addEventListener('click', crossOutMenu);
 const addContent = () => {
 	const cartButtons = document.querySelectorAll('.add__button');
 	const contentContainer = document.querySelector('.checkout-container-main-content');
+
+
 	cartButtons.forEach(cartButton => {
 		cartButton.addEventListener('click', () => {
+			const bookContainer = cartButton.closest('.book__container');
+
 			const newDiv = document.createElement('div');
 			newDiv.classList.add('book__container-checkout');
-			contentContainer.appendChild(newDiv);
+
+			const bookImage = bookContainer.querySelector('.book__image').cloneNode(true);
+			newDiv.appendChild(bookImage);
+
+			const bookPrice = bookContainer.querySelector('.book__price').textContent;
+			const priceElement = document.createElement('p');
+			priceElement.textContent = bookPrice;
+			newDiv.appendChild(priceElement);
+
+			const bookTitle = bookContainer.querySelector('.book__title').textContent;
+			const titleElement = document.createElement('h3');
+			titleElement.textContent = bookTitle;
+			newDiv.appendChild(titleElement);
+
+			const bookAuthor = bookContainer.querySelector('.book-author').textContent;
+            const authorElement = document.createElement('p');
+            authorElement.textContent = bookAuthor;
+            newDiv.appendChild(authorElement);
+
+			checkoutMenu.appendChild(newDiv);
 		});
 	});
-}
+};
 addContent()
