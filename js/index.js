@@ -88,11 +88,12 @@ checkoutMenu.addEventListener('click', crossOutMenu);
 //ADD CONTENT TO CHECKOUT
 const addContent = () => {
 	const cartButtons = document.querySelectorAll('.add__button');
+	const contentContainer = document.querySelector('.checkout-container-main-content');
 	cartButtons.forEach(cartButton => {
 		cartButton.addEventListener('click', () => {
 			const newDiv = document.createElement('div');
 			newDiv.classList.add('book__container-checkout');
-			checkoutMenu.appendChild(newDiv);
+			contentContainer.appendChild(newDiv);
 		});
 	});
 }

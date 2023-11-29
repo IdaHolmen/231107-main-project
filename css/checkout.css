@@ -9,7 +9,6 @@
 	background: var(--color-primary);
 	border: var(--border-black);
 }
-
 .checkout-container__content {
 	width: 100%;	
 	height: 100%;
@@ -17,6 +16,15 @@
 	flex-direction: column;
 	justify-content: space-between;
 } 
+
+.checkout-container-main-content {
+	width: 100%;
+	height: 37rem;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: column nowrap;
+	align-items: center;
+}
 
 .checkout-container-top {
 	display: flex;
