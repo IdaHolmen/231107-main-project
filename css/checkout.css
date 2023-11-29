@@ -79,3 +79,9 @@
 	margin: var(--spacing-small);
 	font-size: var(--font-size-sm-medium);
 }
+
+.book__container-checkout {
+	width: 25rem;
+	height: 10rem;
+	border: 2px solid black;
+}
