@@ -116,7 +116,7 @@ const addContent = () => {
             authorElement.textContent = bookAuthor;
             newDiv.appendChild(authorElement);
 
-			checkoutMenu.appendChild(newDiv);
+			contentContainer.appendChild(newDiv);
 		});
 	});
 };
