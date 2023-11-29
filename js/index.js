@@ -83,3 +83,17 @@ const crossOutMenu = () => {
 	headerContainer.classList.toggle('header--blurred');
 }
 checkoutMenu.addEventListener('click', crossOutMenu);
+
+
+//ADD CONTENT TO CHECKOUT
+const cartButtons = document.querySelectorAll('.add__button');
+
+const addContent = () => {
+	cartButtons.forEach(cartButton => {
+		cartButton.addEventListener('click', () => {
+			const newDiv = document.createElement('div');
+			checkoutMenu.appendChild(newDiv);
+		});
+	})
+}
+addContent()
