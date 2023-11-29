@@ -100,7 +100,7 @@ html {
 
 .book__container {
 	cursor: pointer;
-	margin-top: var(--spacing-large);
+	margin-top: var(--spacing-medium);
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
@@ -110,10 +110,22 @@ html {
 	border: var(--border-black);
 	border-radius: var(--border-radius-sm-medium);
 	padding: var(--spacing-small);
+	position: relative;
+}
+
+.book-1, .book-2, .book-3, .book-4, .book-5, 
+.book-6, .book-7, .book-8, .book-9, .book-10, 
+.book-11, .book-12, .book-13, .book-14, .book-15, 
+.book-16, .book-17, .book-18, .book-19, .book-20 {
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items: center;
 }
 
 .book__info {
 	width: 12.5rem;
+
 }
 
 .book__container:hover {
@@ -139,7 +151,6 @@ html {
 
 .book__title {
 	font-size: var(--font-size-small);
-
 }
 
 .add__button {
@@ -149,6 +160,8 @@ html {
 	background: var(--color-button-primary);
 	color: var(--color-primary);
 	border-radius: var(--border-radius-medium);
+	position: absolute;
+	bottom: 1.5rem;
 }
 
 .add__button:hover {
