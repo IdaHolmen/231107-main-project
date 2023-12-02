@@ -79,12 +79,10 @@ addContent()
 const updateTotal = () => {
     let total = 0;
     const cartItems = document.querySelectorAll('.checkout-container-flex');
-    console.log('Number of cart items:', cartItems.length); // Log the number of items
 
     for (let i = 0; i < cartItems.length; i++) {
         const cartItem = cartItems[i];
         const priceElement = cartItem.querySelector('.checkout-book-price');
-        console.log('Price Element:', priceElement); // Log each price element
 
         if (priceElement) {
             const price = parseInt(priceElement.innerText.replace(',-', ''));
