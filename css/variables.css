@@ -7,6 +7,7 @@
 	--font-size-medium: 2.3rem;
 	--font-size-headline: 5rem;
 
+	
 	--spacing-small: var(--font-leading-base);
 	--spacing-medium: var(--font-size-sm-medium);
 	--spacing-large: 3rem;
@@ -30,6 +31,7 @@
 	--color-back-button-active: #CCD5AE;
 
 	--color-search-bar: #EBEBEB;
+	--color-back-button-cart-hover: #FFC1C1;
 
 	--border-radius-small: 0.625rem;
 	--border-radius-sm-medium: 0.938rem;

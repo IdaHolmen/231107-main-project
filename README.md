@@ -7,3 +7,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 Used this code to put the svg in the search field
 https://codepen.io/anon/pen/wizIp
+https://www.youtube.com/watch?v=YeFzkC2awTM&t=2s
