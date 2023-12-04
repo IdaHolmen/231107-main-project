@@ -103,7 +103,3 @@ body {
 .back__button:hover {
 	background: var(--color-back-button-hover);
 }
-
-.back__button:active {
-	background: var(--color-back-button-active);
-}

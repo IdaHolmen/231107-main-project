@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 .page-content {
+	font-family: 'Playfair Display', serif;
 	width: 100vw;
 	height: 100vh;
-	font-family: serif;
 	background: var(--color-primary);
 	display: flex;
 	flex-direction: column;
@@ -25,8 +27,8 @@
 	background: var(--color-home-page-normal);
 	font-size: var(--font-size-small);
 	width: 12.5rem;
-	height: 2.813;
-	border-radius: var(--border-radius-sm-medium);
+	height: 2.813rem;
+	border-radius: var(--border-radius-medium);
 }
 
 .home-button:hover {
