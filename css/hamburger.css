@@ -43,7 +43,7 @@
 	font-weight: 600;
 }
 
-.sort-button, .filter-button, .category-button, .fiction-button, .bestseller-button {
+.sort-button, .filter-button {
 	height: 2.5rem;
 	width: 8rem;
 	margin: 0.4rem;
@@ -53,14 +53,11 @@
 
 
 .sort-button:not(.sort-button--active):hover,
-.filter-button:not(.filter-button--active):hover,
-.category-button:not(.category-button--active):hover,
-.fiction-button:not(.fiction-button--active):hover,
-.bestseller-button:not(.bestseller-button--active):hover {
+.filter-button:not(.filter-button--active):hover {
 	background: var(--color-search-bar);
 }
 
-.sort-button--active, .filter-button--active, .category-button--active, .fiction-button--active, .bestseller-button--active {
+.sort-button--active, .filter-button--active {
 	background-color: black;
 	color: var(--color-primary);
 }

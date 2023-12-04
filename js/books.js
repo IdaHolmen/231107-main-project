@@ -4,251 +4,200 @@ const books = [
 	title: 'Harry Potter and the Prisoner of Azkaban',
 	author: 'J. K. Rowling',
 	dataIndex: 0,
-	popular: true,
-	category: 'young adult',
-	fiction: true,
+	//a nested array with bestseller, age group and fiction/non-fiction all in one	
+	category: [true, 'kids', true],
 	},
 
 	{ 
 	title: 'The Hitchhikers Guide to the Galaxy',
 	author: 'Douglas Adams',
 	dataIndex: 1,
-	popular: true,
-	category: 'young adult',
-	fiction: true,
+	category: [true, 'young adult', true],
 	},
 
 	{ 
 	title: 'The Woman In Me',
 	author: 'Britney Spears',
 	dataIndex: 2,
-	popular: true,
-	category: 'adult',
-	fiction: false,
+	category: [true, 'adult', false],
 	},
 
 	{
 	title: 'The Snowcat Prince',
 	author: 'Dina Norlund',
 	dataIndex: 3,
-	popular: false,
-	category: 'kids',
-	fiction: true,
+	category: [false, 'kids', true],
 	},
 
 	{
 	title: 'Gone Girl',
 	author: 'Gillian Flynn',
 	dataIndex: 4,
-	popular: false,
-	category: 'adult',
-	fiction: true,
+	category: [false, 'adult', true],
 	},
 
 	{ 
 	title: 'Frida: A Biography of Frida Kahlo',
 	author: 'Hayden Herrera',
 	dataIndex: 5,
-	popular: false,
-	category: 'adult',
-	fiction: false,
+	category: [false, 'adult', false],
 	},
 
 	{
 	title: 'Hel Ved',
 	author: 'Lars Mytting',
 	dataIndex: 6,
-	popular: false,
-	category: 'adult',
-	fiction: false,
+	category: [false, 'adult', false],
 	},
 
 	{
 	title: 'Brillebjørn i svømmehallen',
 	author: 'Ida Jackson',
 	dataIndex: 7,
-	popular: false,
-	category: 'kids',
-	fiction: true,
+	category: [false, 'adult', true],
 	},
 
 	{
 	title: 'Mistborn: The Final Empire',
 	author: 'Brandon Sanderson',
 	dataIndex: 8,
-	popular: false,
-	category: 'young adult',
-	fiction: true,
+	category: [false, 'young adult', true],
 	},
 
 	{
 	title: 'Fysikkmagi',
 	author: 'Andreas Wahl',
 	dataIndex: 9,
-	popular: true,
-	category: 'kids',
-	fiction: false,
+	category: [true, 'kids', false],
 	},
 
 	{
 	title: 'Min skyld',
 	author: 'Abid Raja',
 	dataIndex: 10,
-	popular: true,
-	category: 'adult',
-	fiction: false,
+	category: [true, 'kids', false],
 	},
 
 	{
 	title: 'Gjentakelsen',
 	author: 'Vigdis Hjorth',
 	dataIndex: 11,
-	popular: false,
-	category: 'adult',
-	fiction: true,
+	category: [false, 'adult', true],
 	},
 
 	{
 	title: 'Trines kokebok for unge kokker',
 	author: 'Trine Sandberg',
 	dataIndex: 12,
-	popular: false,
-	category: 'young adult',
-	fiction: false,
+	category: [false, 'young adult', false],
 	},
 
 	{
 	title: 'Tungtvannsaksjonen',
 	author: 'John S. Jamtli',
 	dataIndex: 13,
-	popular: false,
-	category: 'young adult',
-	fiction: false,
+	category: [false, 'young adult', false],
 	},
 
 	{
 	title: 'Ruffen på nye eventyr',
 	author: 'Tor Åge Bringsværd',
 	dataIndex: 14,
-	popular: false,
-	category: 'kids',
-	fiction: true,
+	category: [false, 'kids', true],
 	},
 
 	{
 	title: 'Farvel, Farah Diba',
 	author: 'Karin Fossum',
 	dataIndex: 15,
-	popular: false,
-	category: 'adult',
-	fiction: true,
+	category: [false, 'adult', true],
 	},
 
 	{
 	title: 'The Very Hungry Caterpillar',
 	author: 'Erik Carle',
 	dataIndex: 16,
-	popular: true,
-	category: 'kids',
-	fiction: true,
+	category: [true, 'kids', true],
 	},
 
 	{
 	title: 'De uverdige',
 	author: 'Roy Jacobsen',
 	dataIndex: 17,
-	popular: false,
-	category: 'adult',
-	fiction: true,
+	category: [false, 'adult', true],
 	},
 
 	{
 	title: 'Anatomi for småtasser',
 	author: 'Jonathan Litton',
 	dataIndex: 18,
-	popular: true,
-	category: 'kids',
-	fiction: false,
+	category: [true, 'kids', false],
 	},
 
 	{
 	title: 'Pulskuren',
 	author: 'Torkil Færø',
 	dataIndex: 19,
-	popular: true,
-	category: 'adult',
-	fiction: false,
+	category: [true, 'adult', false],
 	},
 ]
 
 
-//filtering by categories
+//FILTER FUNCTION
 
-const categoryButtons = document.querySelectorAll('.category-button');
+const filterButtons = document.querySelectorAll('.filter-button');
 const bookContainers = document.querySelectorAll('.book__container');
 
-categoryButtons.forEach(categoryButton => {
-	categoryButton.addEventListener('click', (event) => {
-		const group = event.target.textContent;
-		const isActive = event.target.classList.contains('category-button--active');
+//Goes through the filter buttons
+filterButtons.forEach(filterButton => {
+	filterButton.addEventListener('click', (event) => {
+		const filter = event.target.textContent.toLowerCase();
+		const isActive = event.target.classList.contains('filter-button--active');
 
-		categoryButtons.forEach(button => {
-			button.classList.remove('category-button--active');
+		filterButtons.forEach(button => {
+			button.classList.remove('filter-button--active');
 		});
 
 		if (isActive) {
 			bookContainers.forEach(container => {
 				container.style.display = 'flex';
 			});
+			//applies filter
 		} else {
-			event.target.classList.add('category-button--active');
+			event.target.classList.add('filter-button--active');
 			bookContainers.forEach((container, index) => {
-				if (books[index].category === group.toLowerCase()) {
-					container.style.display = 'flex';
-				} else {
-					container.style.display = 'none';
-				}
+				const book = books[index];
+				const matchesFilter = matchesBookFilter(book, filter);
+				container.style.display = matchesFilter ? 'flex' : 'none';
 			});
 		}
 	});
 });
 
-//filtering by fiction/non-fiction
+const matchesBookFilter = (book, filter) => {
+	//checks age group and returns the one that matches through accessing the index of the nested array
+	if (filter === 'adult' || filter === 'young adult' || filter === 'kids') {
+		return book.category[1] === filter;
+	}
+	
+	//checks if it's fiction of non-fiction through boolean statements
+	if (filter === 'fiction') {
+		return book.category[2] === true;
+	}
 
-const fictionButtons = document.querySelectorAll('.fiction-button');
+	if (filter === 'non-fiction') {
+		return book.category[2] === false;
+	}
 
-fictionButtons.forEach(fictionButton => {
-	fictionButton.addEventListener('click', (event) => {
-		const fictionOrNonFiction = event.target.textContent;
+	//checks if it's a bestseller through boolean statement
+	if (filter ==='bestsellers') {
+		return book.category[0] === true; 
+	}
+	else {
+		return false;
+	}
+}
 
-		const isFiction = fictionOrNonFiction.toLowerCase() === 'fiction';
-
-		bookContainers.forEach((container, index) => {
-			if (books[index].fiction === isFiction) {
-				container.style.display = 'flex';
-			}  else {
-				container.style.display = 'none';
-			}
-		});
-	});
-});
-
-
-//filtering by bestsellers
-
-const bestsellerButton = document.querySelector('.bestseller-button');
-
-bestsellerButton.addEventListener('click', (event) => {
-	const bestsellerOrNot = event.target.textContent;
-
-	bookContainers.forEach((container, index) => {
-		if (books[index].popular === true) {
-			container.style.display = 'flex';
-		} else {
-			container.style.display = 'none';
-		}
-	});
-});
 
 // SORTING FUNCTIONS
 
