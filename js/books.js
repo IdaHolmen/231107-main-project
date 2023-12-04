@@ -1,9 +1,9 @@
-//an array called books containing book objects
-
+//an array that contains all the books
 const books = [
 	{	
 	title: 'Harry Potter and the Prisoner of Azkaban',
 	author: 'J. K. Rowling',
+	dataIndex: 0,
 	popular: true,
 	category: 'young adult',
 	fiction: true,
@@ -12,6 +12,7 @@ const books = [
 	{ 
 	title: 'The Hitchhikers Guide to the Galaxy',
 	author: 'Douglas Adams',
+	dataIndex: 1,
 	popular: true,
 	category: 'young adult',
 	fiction: true,
@@ -20,6 +21,7 @@ const books = [
 	{ 
 	title: 'The Woman In Me',
 	author: 'Britney Spears',
+	dataIndex: 2,
 	popular: true,
 	category: 'adult',
 	fiction: false,
@@ -28,6 +30,7 @@ const books = [
 	{
 	title: 'The Snowcat Prince',
 	author: 'Dina Norlund',
+	dataIndex: 3,
 	popular: false,
 	category: 'kids',
 	fiction: true,
@@ -36,6 +39,7 @@ const books = [
 	{
 	title: 'Gone Girl',
 	author: 'Gillian Flynn',
+	dataIndex: 4,
 	popular: false,
 	category: 'adult',
 	fiction: true,
@@ -44,6 +48,7 @@ const books = [
 	{ 
 	title: 'Frida: A Biography of Frida Kahlo',
 	author: 'Hayden Herrera',
+	dataIndex: 5,
 	popular: false,
 	category: 'adult',
 	fiction: false,
@@ -52,6 +57,7 @@ const books = [
 	{
 	title: 'Hel Ved',
 	author: 'Lars Mytting',
+	dataIndex: 6,
 	popular: false,
 	category: 'adult',
 	fiction: false,
@@ -60,6 +66,7 @@ const books = [
 	{
 	title: 'Brillebjørn i svømmehallen',
 	author: 'Ida Jackson',
+	dataIndex: 7,
 	popular: false,
 	category: 'kids',
 	fiction: true,
@@ -68,6 +75,7 @@ const books = [
 	{
 	title: 'Mistborn: The Final Empire',
 	author: 'Brandon Sanderson',
+	dataIndex: 8,
 	popular: false,
 	category: 'young adult',
 	fiction: true,
@@ -76,6 +84,7 @@ const books = [
 	{
 	title: 'Fysikkmagi',
 	author: 'Andreas Wahl',
+	dataIndex: 9,
 	popular: true,
 	category: 'kids',
 	fiction: false,
@@ -84,6 +93,7 @@ const books = [
 	{
 	title: 'Min skyld',
 	author: 'Abid Raja',
+	dataIndex: 10,
 	popular: true,
 	category: 'adult',
 	fiction: false,
@@ -92,6 +102,7 @@ const books = [
 	{
 	title: 'Gjentakelsen',
 	author: 'Vigdis Hjorth',
+	dataIndex: 11,
 	popular: false,
 	category: 'adult',
 	fiction: true,
@@ -100,6 +111,7 @@ const books = [
 	{
 	title: 'Trines kokebok for unge kokker',
 	author: 'Trine Sandberg',
+	dataIndex: 12,
 	popular: false,
 	category: 'young adult',
 	fiction: false,
@@ -108,6 +120,7 @@ const books = [
 	{
 	title: 'Tungtvannsaksjonen',
 	author: 'John S. Jamtli',
+	dataIndex: 13,
 	popular: false,
 	category: 'young adult',
 	fiction: false,
@@ -116,6 +129,7 @@ const books = [
 	{
 	title: 'Ruffen på nye eventyr',
 	author: 'Tor Åge Bringsværd',
+	dataIndex: 14,
 	popular: false,
 	category: 'kids',
 	fiction: true,
@@ -124,14 +138,16 @@ const books = [
 	{
 	title: 'Farvel, Farah Diba',
 	author: 'Karin Fossum',
+	dataIndex: 15,
 	popular: false,
 	category: 'adult',
 	fiction: true,
 	},
 
 	{
-	title: 'Den lille larven Aldrimett',
+	title: 'The Very Hungry Caterpillar',
 	author: 'Erik Carle',
+	dataIndex: 16,
 	popular: true,
 	category: 'kids',
 	fiction: true,
@@ -140,6 +156,7 @@ const books = [
 	{
 	title: 'De uverdige',
 	author: 'Roy Jacobsen',
+	dataIndex: 17,
 	popular: false,
 	category: 'adult',
 	fiction: true,
@@ -148,6 +165,7 @@ const books = [
 	{
 	title: 'Anatomi for småtasser',
 	author: 'Jonathan Litton',
+	dataIndex: 18,
 	popular: true,
 	category: 'kids',
 	fiction: false,
@@ -156,6 +174,7 @@ const books = [
 	{
 	title: 'Pulskuren',
 	author: 'Torkil Færø',
+	dataIndex: 19,
 	popular: true,
 	category: 'adult',
 	fiction: false,
@@ -232,53 +251,52 @@ bestsellerButton.addEventListener('click', (event) => {
 });
 
 // SORTING FUNCTIONS
-const sortingButtons = document.querySelectorAll('.sort-button');
-
-const sort = (event) => {
-	sortingButtons.forEach(button => {
-		button.classList.remove('sort-button-active');
-	})
-
-	const currentButton = event.currentTarget;
-	currentButton.classList.add('sort-button--active');
-
-	if (currentButton.id === 'sort-author') {
-		sortAuthor(event);
-	} else if (currentButton.id === 'sort-title') {
-		sortTitles(event);
-	}
-}
-
-sortingButtons.forEach(sortButton =>{
-	sortButton.addEventListener('click', sort);
-})
 
 //sorting by author 
-const sortAuthor = (event) => {
-	const sortedAuthors = [...bookContainers].sort((a, b) => {
-		if (a.dataset.author > b.dataset.author) {
-			return 1;
-		} else {
-			return -1;
-		}
-	});
-
-	sortedAuthors.forEach(item => {
-		mainContainer.appendChild(item);
-	});
+const sortByAuthor = () => {
+	books.sort((a, b) =>
+		a.author.localeCompare(b.author, undefined, {sensitivity: 'base'})
+	);
+	reorderDisplay();	
 }
-
 //sorting by title
-const sortTitles = (event) => {
-	const sortedTitles = [...bookContainers].sort((a, b) => {
-		if (a.dataset.title > b.dataset.title) {
-			return 1;
-		} else {
-			return -1;
-		}
+const sortByTitle = () => {
+	books.sort((a, b) => 
+		a.title.localeCompare(b.title, undefined, {sensitivity: 'base'})
+	);
+	reorderDisplay();
+ }
+
+// Appends the book containers according to their index 
+
+const reorderDisplay = () => {
+	const sortedElements = books.map(book => {
+		return document.querySelector(`.book__container[data-index="${book.dataIndex}"]`);
 	});
 
-	sortedTitles.forEach(item => {
-		mainContainer.appendChild(item);
+	sortedElements.forEach(element => {
+		if (element) mainContainer.appendChild(element);
 	});
 }
+
+// Adding class to active button
+const sortingButtons = document.querySelectorAll('.sort-button');
+
+const updateActiveButton = (currentButton) => {
+    sortingButtons.forEach(button => {
+        button.classList.remove('sort-button--active');
+    });
+    currentButton.classList.add('sort-button--active');
+};
+
+// Event listeners for each sorting button
+document.getElementById('sort-author').addEventListener('click', function() {
+    sortByAuthor();
+    updateActiveButton(this);
+});
+
+document.getElementById('sort-title').addEventListener('click', function() {
+    sortByTitle();
+    updateActiveButton(this);
+});
+
