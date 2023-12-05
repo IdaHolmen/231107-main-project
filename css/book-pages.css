@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
 	background: var(--color-primary);
+	font-family: 'Playfair Display', serif;
+
 }
 
 .book-info-container {
-	font-family: 'Playfair Display', serif;
 	width: 100vw;
 	height: 50vh;
 	padding: var(--spacing-large);
@@ -63,6 +66,10 @@ body {
 	color: var(--color-secondary);
 }
 
+.book-info__price {
+	font-size: var(--font-size-medium);
+	font-weight: 600;
+}
 /* buttons */
 
 .button-container {
@@ -85,11 +92,6 @@ body {
 
 .add__button:active {
 	background: var(--color-button-tertiary);
-}
-
-.book-info__price {
-	font-size: var(--font-size-medium);
-	font-weight: 600;
 }
 
 .back__button {

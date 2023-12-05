@@ -1,0 +1,97 @@
+@media screen and (max-width: 720px) {
+
+	/* MAIN PAGE */
+	.book__container {
+		width: 20rem;
+		height: 25rem;
+	}
+	
+	.book__info {
+		width: 15rem;
+	}
+
+	.book__image {
+		width: 9rem;
+		height: 12rem;
+	}
+
+	.header__headline {
+		font-size: var(--font-size-medium-large);
+	}
+
+	.header-bottom {
+		display: none;
+	}
+
+	/* CHECKOUT */
+	.image-element-checkout {
+		width: 4rem;
+		height: 6rem;
+	}
+
+	.checkout-container {
+		width: 100%;
+	}
+
+	/* HAMBURGER MENU */
+	.hamburger__main-container {
+		height: 440px;
+	}
+
+	.hamburger__content {
+		font-size: var(--font-size-tiny);
+	}
+
+	.sort-button, .filter-button {
+		height: 2rem;
+		width: 6rem;
+		margin: 0.2rem;
+	}
+
+	/* BOOK PAGES */
+	.book-info__image {
+		width: 8rem;
+		height: 11rem;
+	}
+
+	.book-info__title {
+		font-size: var(--font-size-sm-medium);
+	}
+
+	.book-info__author {
+		font-size: var(--font-size-base);
+	}
+
+	.book-info__text {
+		font-size: var(--font-size-base);
+	}
+
+	.book-info__price {
+		font-size: var(--font-size-small);
+	}
+
+	.add__button {
+		width: 8rem;
+		height: 2rem;
+	}
+
+	.back__button {
+		width: 10rem;
+		height: 2rem;
+	}
+
+	/* THANK YOU PAGE */
+	.page-headline {
+		font-size: var(--font-size-medium);
+	}
+
+	.page-shipping-info {
+		font-size: var(--font-size-small);
+	}
+}
+
+@media screen and (max-width: 1048px) {
+	.page-headline {
+		font-size: var(--font-size-medium-large);
+	}
+}
