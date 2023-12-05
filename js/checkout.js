@@ -65,12 +65,14 @@ const addContent = () => {
                 const buttonClicked = event.target;
                 buttonClicked.parentElement.remove();
 				updateTotal();
+				updateBadgeCount();
             });
 
 			newDiv.appendChild(deleteBookButton);
 
 			contentContainer.appendChild(newDiv);
-			updateTotal()
+			updateTotal();
+			updateBadgeCount();
 		});
 	});
 };
@@ -93,6 +95,29 @@ const updateTotal = () => {
     }
     document.querySelector('.total-price').innerText = 'Total price: ' + total + ',-';
 };
+
+//BADGE
+const badge = document.querySelector('.badge');
+
+document.addEventListener('DOMContentLoaded', () => {
+    badge.style.display = 'none'; 
+    updateBadgeCount(); 
+});
+
+const updateBadgeCount = () => {
+	const cartItems = document.querySelectorAll('.checkout-container-flex');
+	console.log(cartItems);
+	const badgeCount = cartItems.length;
+
+	console.log(badgeCount);
+	if (badgeCount > 0) {
+		badge.textContent = badgeCount;
+		badge.style.display = 'flex';
+	} else {
+		badge.style.display = 'none';
+	}
+}
+
 
 
 
