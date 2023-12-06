@@ -5,6 +5,11 @@ Every book has a container that can be pressed and you can learn more about each
 
 The hamburger menu on the right contains a small menu for sorting and filtering through the books. The page has to be refreshed in order to clear the filters and sorting. 
 
+Link to github-repository:
+https://github.com/IdaHolmen/231107-main-project
+
+
+SOURCES
 Used this link to learn more about the sort() method
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
