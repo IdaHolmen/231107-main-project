@@ -31,6 +31,8 @@
 		<div class="header-bottom">
 			<div class="search-container">
 				<input class="search-field" type="text" placeholder="Search">
+				<!-- Used some of this code to put the svg in the search field
+				https://codepen.io/anon/pen/wizIp -->
 				<img class="search-symbol" src="./assets/icons/magnifying-glass-light.svg" alt="Magnifying glass">
 			</div>
 		</div>
@@ -58,21 +60,21 @@
 				</div>
 			</aside>
 
-		<div class="main-container">
+		<main class="main-container">
 			<!-- Checkout  -->
-		<div class="checkout-container">
-			<div class="checkout-container__content">
-				<img class="exit-icon" src="./assets/icons/xmark-light.svg" alt="Leave register">
-				<div class="checkout-container-top">
-					<div class="checkout-headline">Summary</div>
-				</div>
-				<div class="checkout-container-main-content"></div>
-				<div class="checkout-container-bottom">
-					<div class="total-price">Total sum: </div>
-					<a href="thank-you-page.html"><button class="checkout-page__button">Go to checkout</button></a>
+			<div class="checkout-container">
+				<div class="checkout-container__content">
+					<img class="exit-icon" src="./assets/icons/xmark-light.svg" alt="Leave register">
+					<div class="checkout-container-top">
+						<div class="checkout-headline">Summary</div>
+					</div>
+					<div class="checkout-container-main-content"></div>
+					<div class="checkout-container-bottom">
+						<div class="total-price">Total sum: </div>
+						<a href="thank-you-page.html"><button class="checkout-page__button">Go to checkout</button></a>
+					</div>
 				</div>
 			</div>
-		</div>
 
 			<!-- BOOK SECTION -->
 			<!-- J.K. Rowling - Harry Potter and the Prisoner of Azkaban-->
@@ -394,13 +396,13 @@
 				</a>
 				<button class="add__button">Add to cart</button>
 			</div>
-		</div>
+		</main>
 	</div>
 
 	
 
 	<footer>
-		<div class="footer-text">This site is created as a study project by <b>Ida Amundsen Holmen</b>.</div> <div>Reach out to me at e-mail <b>idaaholmen@gmail.com</b> or follow me on <a href="https://github.com/IdaHolmen">Github</a></div>
+		<div class="footer-text">This site is created as a study project by <b>Ida Amundsen Holmen</b>.</div> <div>Reach out to me at e-mail <b>idaaholmen@gmail.com</b> or check out the code at <a class="github-link" href="https://github.com/IdaHolmen/231107-main-project">Github.</a></div>
 	</footer>
 
 	<script src="./js/index.js" defer></script>

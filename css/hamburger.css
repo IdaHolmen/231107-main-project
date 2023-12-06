@@ -4,9 +4,9 @@
 	margin-right: var(--spacing-medium);
 	background: var(--color-primary);
 	width: 16rem;
-	height: 550px;
-	border-radius: 0 15px 15px 0;
-	box-shadow: 0 0 8px grey;
+	height: 34.375rem;
+	border-radius: 0 0.938rem 0.938rem 0;
+	box-shadow: 0 0 0.5rem grey;
 	display: none;
 }
 

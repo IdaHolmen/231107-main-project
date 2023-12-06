@@ -4,7 +4,7 @@ const books = [
 	title: 'Harry Potter and the Prisoner of Azkaban',
 	author: 'J. K. Rowling',
 	dataIndex: 0,
-	//a nested array with bestseller, age group and fiction/non-fiction all in one	
+	//a nested array with bestseller, age group and fiction/non-fiction all in one for filtering	
 	category: [true, 'kids', true],
 	},
 
@@ -148,7 +148,7 @@ const books = [
 const filterButtons = document.querySelectorAll('.filter-button');
 const bookContainers = document.querySelectorAll('.book__container');
 
-//Goes through the filter buttons
+//Goes through the filter buttons + removes/adds filter-button--active class
 filterButtons.forEach(filterButton => {
 	filterButton.addEventListener('click', (event) => {
 		const filter = event.target.textContent.toLowerCase();
@@ -208,7 +208,8 @@ const sortByAuthor = () => {
 	);
 	reorderDisplay();	
 }
-//sorting by title
+//sorting by title. Used link below to figure it out
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 const sortByTitle = () => {
 	books.sort((a, b) => 
 		a.title.localeCompare(b.title, undefined, {sensitivity: 'base'})

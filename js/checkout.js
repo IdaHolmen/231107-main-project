@@ -1,10 +1,13 @@
 //CHECKOUT 
+//Used this video to understand the different elements
+//https://www.youtube.com/watch?v=YeFzkC2awTM&t=2s
 
 const checkoutMenuButton = document.querySelector('.shopping-bag-icon');
 const checkoutMenu = document.querySelector('.checkout-container');
 const crossOutMenuButton = document.querySelector('.exit-icon');
 const headerContainer = document.querySelector('.header');
 
+//When shopping-bag-icon is clicked the checkout is displayed and background is blurred
 const displayCheckoutMenu = () => {
 	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
 	
@@ -15,6 +18,7 @@ const displayCheckoutMenu = () => {
 }
 checkoutMenuButton.addEventListener('click', displayCheckoutMenu);
 
+//crosses out menu
 const crossOutMenu = () => {
 	checkoutMenu.style.display = checkoutMenu.style.display === 'block' ? 'none' : 'block';
 
@@ -39,6 +43,7 @@ const addContent = () => {
 		cartButton.addEventListener('click', () => {
 			const bookContainer = cartButton.closest('.book__container');
 
+			//Creating the div dynamically!
 			const newDiv = document.createElement('div');
 			newDiv.classList.add('checkout-container-flex');
 
@@ -58,6 +63,27 @@ const addContent = () => {
 			priceElement.textContent = bookPrice;
 			newDiv.appendChild(priceElement);
 
+			const quantityDiv = document.createElement('div');
+            quantityDiv.classList.add('quantity-controls');
+
+            const decrementButton = document.createElement('button');
+            decrementButton.textContent = '-';
+            decrementButton.onclick = () => updateQuantity(newDiv, -1);
+
+            const incrementButton = document.createElement('button');
+            incrementButton.textContent = '+';
+            incrementButton.onclick = () => updateQuantity(newDiv, 1);
+
+            const quantityDisplay = document.createElement('span');
+            quantityDisplay.textContent = '1'; // default quantity
+            quantityDisplay.classList.add('quantity-display');
+
+            quantityDiv.appendChild(decrementButton);
+            quantityDiv.appendChild(quantityDisplay);
+            quantityDiv.appendChild(incrementButton);
+
+            newDiv.appendChild(quantityDiv);
+
 			const deleteBookButton = document.createElement('button');
 			deleteBookButton.classList.add('delete-button');
 			deleteBookButton.textContent = 'Remove?';
@@ -66,6 +92,7 @@ const addContent = () => {
                 buttonClicked.parentElement.remove();
 				updateTotal();
 				updateBadgeCount();
+				updateQuantity()
             });
 
 			newDiv.appendChild(deleteBookButton);
@@ -73,40 +100,48 @@ const addContent = () => {
 			contentContainer.appendChild(newDiv);
 			updateTotal();
 			updateBadgeCount();
+			updateQuantity()
 		});
 	});
 };
 addContent()
 
+// QUANTITY
+const updateQuantity = (cartItem, change) => {
+    const quantityDisplay = cartItem.querySelector('.quantity-display');
+    let quantity = parseInt(quantityDisplay.textContent);
+    quantity = Math.max(1, quantity + change); //makes sure it's never less than one and checks for change
+    quantityDisplay.textContent = quantity.toString();
+
+    updateTotal();
+};
+
+//TOTAL SUM
 const updateTotal = () => {
     let total = 0;
+
     const cartItems = document.querySelectorAll('.checkout-container-flex');
+    cartItems.forEach(cartItem => {
+        const price = parseInt(cartItem.querySelector('.checkout-book-price').textContent.replace(',-', ''));
+        const quantity = parseInt(cartItem.querySelector('.quantity-display').textContent);
+        total += price * quantity;
+    });
 
-    for (let i = 0; i < cartItems.length; i++) {
-        const cartItem = cartItems[i];
-        const priceElement = cartItem.querySelector('.checkout-book-price');
-
-        if (priceElement) {
-            const price = parseInt(priceElement.innerText.replace(',-', ''));
-            total += price;
-        } else {
-            console.log('Price element not found in cart item', i);
-        }
-    }
     document.querySelector('.total-price').innerText = 'Total price: ' + total + ',-';
 };
 
 //BADGE
 const badge = document.querySelector('.badge');
 
+//Makes sure that badge is not visible when page is loaded
 document.addEventListener('DOMContentLoaded', () => {
     badge.style.display = 'none'; 
     updateBadgeCount(); 
 });
 
+// If item is added to cart it displays the badge and changes textContent accordingly
 const updateBadgeCount = () => {
 	const cartItems = document.querySelectorAll('.checkout-container-flex');
-	console.log(cartItems);
 	const badgeCount = cartItems.length;
 
 	console.log(badgeCount);
@@ -116,8 +151,4 @@ const updateBadgeCount = () => {
 	} else {
 		badge.style.display = 'none';
 	}
-}
-
-
-
-
+};

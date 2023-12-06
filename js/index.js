@@ -33,7 +33,7 @@ const searchBooks = () => {
 	}
 }
 
-
+//So that you can search with enter button
 searchField.addEventListener('keypress', function(e) {
 	if (e.key === 'Enter') {
 		searchBooks();
@@ -54,8 +54,3 @@ const toggleHamburgerMenu = () => {
 }
 
 hamburgerMenuButton.addEventListener('click', toggleHamburgerMenu);
-
-
-
-
-
