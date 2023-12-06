@@ -3,7 +3,10 @@ It also has a badge that adjust according to how many books are in the cart. Unf
 
 Every book has a container that can be pressed and you can learn more about each book. 
 
-The hamburger menu on the right contains a small menu for sorting and filtering through the books. The page has to be refreshed in order to clear the filters and sorting. 
+The hamburger menu on the right contains a small menu for sorting and filtering through the books. The page has to be refreshed in order to clear the filters and sorting. The order will also be affected if both sorting and filer are activated at the same time.
+
+Link to published netlify page:
+
 
 Link to github-repository:
 https://github.com/IdaHolmen/231107-main-project

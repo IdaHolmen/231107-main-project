@@ -75,7 +75,7 @@ const books = [
 	title: 'Min skyld',
 	author: 'Abid Raja',
 	dataIndex: 10,
-	category: [true, 'kids', false],
+	category: [true, 'adult', false],
 	},
 
 	{
